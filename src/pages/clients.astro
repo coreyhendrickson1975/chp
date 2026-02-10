@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SiteHeader } from '../components/SiteHeader';
+
+const clients = [
+  { name: "PBS", logo: "/images/logos/pbs-1-logo-png-transparent.png" },
+  { name: "NBC", logo: "/images/logos/nbc-logo-png-transparent.png" },
+  { name: "HBO", logo: "/images/logos/hbo-logo-png_seeklogo-65764.png" },
+  { name: "Benjamin Moore", logo: "/images/logos/benjamin-moore-paints-logo-png_seeklogo-18380.png" },
+  { name: "Land O'Lakes", logo: "/images/logos/landolakes.png" },
+  { name: "Phish", logo: "/images/logos/Phish-Logo.jpg" },
+  { name: "Farmhouse Pottery", logo: "/images/logos/farmhouse-pottery.jpg" },
+  { name: "Finish Line", logo: "/images/logos/finish-line-logo.png" },
+  { name: "ODC", logo: "/images/logos/odc.jpg" },
+  { name: "Hotel Vermont", logo: "/images/logos/hotel-vermont.png" },
+  { name: "Shackleton Thomas", logo: "/images/logos/shackletonthomas.png" },
+  { name: "VLT", logo: "/images/logos/vlt.jpg" },
+];
+---
+
+<BaseLayout title="Clients — Corey Hendrickson Productions" description="A selection of clients Corey Hendrickson Productions has had the pleasure of working with.">
+  <SiteHeader client:load />
+  <main class="pt-24 pb-20">
+    <div class="mx-auto max-w-2xl px-6 pt-16 text-center md:px-10 md:pt-24">
+      <h1 class="mb-8 text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
+        Select Clients
+      </h1>
+      <p class="text-sm leading-relaxed text-muted-foreground md:text-base">
+        A selection of brands and organizations I have had the pleasure of
+        working with.
+      </p>
+    </div>
+
+    <div class="mx-auto max-w-5xl px-6 pt-16 md:px-10 md:pt-24">
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+        {clients.map((client) => (
+          <div class="flex aspect-[4/3] items-center justify-center bg-white p-6">
+            {client.logo ? (
+              <img
+                src={client.logo}
+                alt={client.name}
+                width={160}
+                height={80}
+                class="max-h-16 w-auto object-contain opacity-70 grayscale"
+              />
+            ) : (
+              <span class="text-center text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                {client.name}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>

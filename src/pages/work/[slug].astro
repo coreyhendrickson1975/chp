@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { SiteHeader } from '../../components/SiteHeader';
+import { ProjectDetail } from '../../components/ProjectDetail';
+import { projects, getProjectBySlug, getNextProject } from '../../lib/projects';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = getProjectBySlug(slug);
+
+if (!project) {
+  return Astro.redirect('/404');
+}
+
+const nextProject = getNextProject(slug);
+const title = `${project.title} — Corey Hendrickson Productions`;
+const description = project.description[0]?.slice(0, 160) || '';
+---
+
+<BaseLayout title={title} description={description}>
+  <SiteHeader client:load />
+  <main>
+    <ProjectDetail project={project} nextProject={nextProject} client:load />
+  </main>
+  <SiteFooter />
+</BaseLayout>

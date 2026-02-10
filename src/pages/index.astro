@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SiteHeader } from '../components/SiteHeader';
+import { PortfolioGrid } from '../components/PortfolioGrid';
+import { NewsletterSection } from '../components/NewsletterSection';
+---
+
+<BaseLayout title="Corey Hendrickson Productions" description="Portfolio of Corey Hendrickson Productions — hand-lettering, illustration, and creative direction.">
+  <SiteHeader client:load />
+  <main>
+    <HeroSection />
+    <PortfolioGrid client:load />
+    <NewsletterSection client:visible />
+  </main>
+  <SiteFooter />
+</BaseLayout>

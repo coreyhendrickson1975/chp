@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SiteHeader } from '../components/SiteHeader';
+
+const steps = [
+  {
+    title: "Discovery & Research",
+    description:
+      "Every project starts with a conversation. I learn about your brand, audience, and goals, then dive into visual research — pulling references from vintage signage, type specimens, and the broader design landscape to find the right direction.",
+  },
+  {
+    title: "Sketching & Concepts",
+    description:
+      "With pencil and paper, I explore a range of lettering styles, compositions, and layouts. This phase is fast and loose — the goal is to generate ideas and find unexpected solutions before committing to any single direction.",
+  },
+  {
+    title: "Refinement & Inking",
+    description:
+      "Once we align on a concept, I refine the chosen sketch into a tight pencil drawing, then ink the final piece by hand using brush pens, pointed nibs, or flat brushes depending on the desired style and texture.",
+  },
+  {
+    title: "Digital Polish",
+    description:
+      "The inked artwork is scanned at high resolution and brought into the digital environment. Here I clean up letterforms, adjust spacing and weight, and prepare the piece for its final application — whether that is print, packaging, or screen.",
+  },
+  {
+    title: "Delivery & Application",
+    description:
+      "The finished lettering is delivered in all the formats you need, along with guidance on usage and placement. I stay available through production to ensure everything translates beautifully from file to final product.",
+  },
+];
+---
+
+<BaseLayout title="Process — Corey Hendrickson Productions" description="A look into the creative process behind Corey Hendrickson Productions' hand-lettering and illustration work.">
+  <SiteHeader client:load />
+  <main class="pt-24 pb-20">
+    <!-- Intro -->
+    <div class="mx-auto max-w-2xl px-6 pt-16 text-center md:px-10 md:pt-24">
+      <h1 class="mb-8 text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
+        My Process
+      </h1>
+      <p class="text-sm leading-relaxed text-muted-foreground md:text-base">
+        Every project begins with curiosity and a blank page. Here is a look
+        at the process I follow to take a lettering piece from initial
+        concept through to the finished work.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="mx-auto max-w-4xl px-6 pt-16 md:px-10 md:pt-24">
+      <div class="space-y-16 md:space-y-24">
+        {steps.map((step, index) => (
+          <div class="grid gap-6 md:grid-cols-[80px_1fr] md:gap-10">
+            <span class="text-xs font-medium uppercase tracking-widest text-muted-foreground md:pt-1">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <div>
+              <h2 class="mb-4 text-xl font-medium tracking-tight text-foreground md:text-2xl">
+                {step.title}
+              </h2>
+              <p class="text-sm leading-relaxed text-muted-foreground md:text-base">
+                {step.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mx-auto max-w-2xl px-6 pt-16 text-center md:px-10 md:pt-24">
+      <div class="border-t border-border pt-16">
+        <h2 class="mb-4 text-xs font-medium uppercase tracking-widest text-foreground">
+          Ready to collaborate?
+        </h2>
+        <a
+          href="mailto:hello@coreyhendrickson.com"
+          class="text-sm text-muted-foreground underline underline-offset-4 transition-opacity hover:opacity-60"
+        >
+          hello@coreyhendrickson.com
+        </a>
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>

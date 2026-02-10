@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SiteHeader } from '../components/SiteHeader';
+---
+
+<BaseLayout title="Not Found — Corey Hendrickson Productions" description="Page not found.">
+  <SiteHeader client:load />
+  <main class="flex min-h-[60vh] flex-col items-center justify-center px-6 pt-24 pb-20">
+    <h1 class="mb-4 text-4xl font-medium tracking-tight text-foreground">
+      Page Not Found
+    </h1>
+    <p class="mb-8 text-muted-foreground">
+      The page you're looking for doesn't exist.
+    </p>
+    <a
+      href="/"
+      class="text-sm font-medium uppercase tracking-widest text-foreground underline underline-offset-4 transition-opacity hover:opacity-60"
+    >
+      Back to Home
+    </a>
+  </main>
+  <SiteFooter />
+</BaseLayout>

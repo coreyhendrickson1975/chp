@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SiteHeader } from '../components/SiteHeader';
+---
+
+<BaseLayout title="About — Corey Hendrickson Productions" description="Learn more about Corey Hendrickson Productions, a hand-lettering studio and creative agency based in Detroit, Michigan.">
+  <SiteHeader client:load />
+  <main class="pt-24 pb-20">
+    <div class="mx-auto max-w-5xl px-6 md:px-10">
+      <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
+        <div class="relative aspect-[3/4] w-full overflow-hidden">
+          <img
+            src="/images/about-portrait.jpg"
+            alt="Corey Hendrickson in the studio"
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <h1 class="mb-8 text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
+            About Me
+          </h1>
+          <div class="space-y-6 text-sm leading-relaxed text-muted-foreground md:text-base">
+            <p>
+              Hi, I'm Corey Hendrickson — a hand-lettering artist and
+              creative producer based in Detroit, Michigan. I specialize in
+              creating custom lettering for brands, publications, and
+              products.
+            </p>
+            <p>
+              My work blends traditional hand-lettering techniques with
+              modern design sensibilities. Every piece begins with pencil on
+              paper before being refined digitally, preserving the warmth and
+              character that only handmade work can offer.
+            </p>
+            <p>
+              I've had the privilege of working with clients ranging from
+              local startups to established brands, helping them communicate
+              their stories through distinctive, handcrafted typography.
+            </p>
+            <p>
+              When I'm not lettering, you can find me exploring flea markets
+              for vintage type specimens, experimenting with new inks and
+              tools, or teaching workshops on the art of hand-lettering.
+            </p>
+          </div>
+
+          <div class="mt-10 border-t border-border pt-10">
+            <h2 class="mb-4 text-xs font-medium uppercase tracking-widest text-foreground">
+              Get in Touch
+            </h2>
+            <a
+              href="mailto:hello@coreyhendrickson.com"
+              class="text-sm text-muted-foreground underline underline-offset-4 transition-opacity hover:opacity-60"
+            >
+              hello@coreyhendrickson.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
