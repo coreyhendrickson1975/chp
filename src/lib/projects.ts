@@ -24,6 +24,9 @@ const middleburyGallery = [
   "/images/middlebury/Middlebury-College-Vermont0013.jpg",
   "/images/middlebury/Middlebury-College-Vermont0014.jpg",
   "/images/middlebury/Middlebury-College-Vermont0015.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0016.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0018.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0017.jpg",
 ];
 
 const woodstockInnGallery = [
