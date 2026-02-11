@@ -25,7 +25,7 @@ function PortfolioCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`relative w-full overflow-hidden ${aspectRatio === "cinematic" ? "aspect-[2.35/1]" : "aspect-video"}`}>
+      <div className={`relative w-full overflow-hidden ${aspectRatio === "cinematic" ? "aspect-[16/9]" : "aspect-video"}`}>
         <img
           src={image || "/placeholder.svg"}
           alt={title}
@@ -66,7 +66,7 @@ export function PortfolioGrid() {
             image={project.image}
             priority={index < 3}
             aspectRatio={index < 3 ? "cinematic" : "video"}
-            baseScale={project.slug === "camphill-foundation" ? 1.1 : 1}
+            baseScale={project.slug === "camphill-foundation" ? 1.1 : project.slug === "woodstock-inn-and-resort" ? 1.05 : 1}
           />
         ))}
       </div>

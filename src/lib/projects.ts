@@ -9,18 +9,21 @@ export interface Project {
 }
 
 const middleburyGallery = [
-  "/images/middlebury/Middlebury_College-0001.jpg",
-  "/images/middlebury/Middlebury_College-0007.jpg",
-  "/images/middlebury/Middlebury_College-0005.jpg",
-  "/images/middlebury/Middlebury_College-0004.jpg",
-  "/images/middlebury/Middlebury_College-0003.jpg",
-  "/images/middlebury/Middlebury_College-0006.jpg",
-  "/images/middlebury/Middlebury_College-0009.jpg",
-  "/images/middlebury/Middlebury_College-0008.jpg",
-  "/images/middlebury/Middlebury_College-0002.jpg",
-  "/images/middlebury/Middlebury_College-0010.jpg",
-  "/images/middlebury/Middlebury_College-0011.jpg",
-  "/images/middlebury/Middlebury_College-0012.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0001.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0002.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0003.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0004.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0005.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0006.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0007.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0008.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0009.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0010.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0011.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0012.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0013.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0014.jpg",
+  "/images/middlebury/Middlebury-College-Vermont0015.jpg",
 ];
 
 const woodstockInnGallery = [
@@ -156,13 +159,13 @@ export const projects: Project[] = [
   {
     title: "Middlebury College",
     slug: "middlebury-college",
-    image: "/images/middlebury/Middlebury_College-0001.jpg",
+    image: "/images/middlebury/Middlebury-College-Vermont0001.jpg",
     description: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     ],
     gallery: middleburyGallery,
-    galleryAspectRatio: "2.35/1",
+    galleryAspectRatio: "16/9",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
