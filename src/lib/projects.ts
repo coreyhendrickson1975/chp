@@ -181,15 +181,14 @@ export const projects: Project[] = [
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
-    title: "Camphill Foundation",
-    slug: "camphill-foundation",
-    image: "/images/camphill/Camphill_Foundation_0010.jpg",
+    title: "Yankee Publishing",
+    slug: "yankee-publishing",
+    image: "/images/yankee/Yankee_Travel_Tourism_0001.jpg",
     description: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     ],
-    gallery: camphillGallery,
-    galleryAspectRatio: "1.33/1",
+    gallery: yankeeGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -238,14 +237,15 @@ export const projects: Project[] = [
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
-    title: "Yankee Publishing",
-    slug: "yankee-publishing",
-    image: "/images/yankee/Yankee_Travel_Tourism_0001.jpg",
+    title: "Camphill Foundation",
+    slug: "camphill-foundation",
+    image: "/images/camphill/Camphill_Foundation_0010.jpg",
     description: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     ],
-    gallery: yankeeGallery,
+    gallery: camphillGallery,
+    galleryAspectRatio: "1.33/1",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
