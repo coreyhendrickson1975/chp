@@ -42,6 +42,12 @@ const woodstockInnGallery = [
   "/images/woodstock-inn/Woodstock-Inn-0010.jpg",
   "/images/woodstock-inn/Woodstock-Inn-0011.jpg",
   "/images/woodstock-inn/Woodstock-Inn-0012.jpg",
+  "/images/woodstock-inn/Woodstock-Inn-0024.jpg",
+  "/images/woodstock-inn/Woodstock-Inn-0022.jpg",
+  "/images/woodstock-inn/Woodstock-Inn-0023.jpg",
+  "/images/woodstock-inn/Woodstock-Inn-0025.jpg",
+  "/images/woodstock-inn/Woodstock-Inn-0021.jpg",
+  "/images/woodstock-inn/Woodstock-Inn-0027.jpg",
 ];
 
 const yankeeGallery = [
@@ -156,6 +162,9 @@ const camphillGallery = [
   "/images/camphill/Camphill_Foundation_0007.jpg",
   "/images/camphill/Camphill_Foundation_0008.jpg",
   "/images/camphill/Camphill_Foundation_0009.jpg",
+  "/images/camphill/Camphill_Foundation_0011.jpg",
+  "/images/camphill/Camphill_Foundation_0013.jpg",
+  "/images/camphill/Camphill_Foundation_0012.jpg",
 ];
 
 export const projects: Project[] = [

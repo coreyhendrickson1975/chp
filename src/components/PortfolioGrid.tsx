@@ -29,7 +29,7 @@ function PortfolioCard({
         <img
           src={image || "/placeholder.svg"}
           alt={title}
-          className={`absolute inset-0 h-full w-full transition-transform duration-700 ease-out ${slug === "camphill-foundation" ? "object-top" : "object-cover"}`}
+          className={`absolute inset-0 h-full w-full transition-transform duration-700 ease-out ${slug === "camphill-foundation" ? "object-top" : slug === "vermont-housing-and-conservation-board" ? "object-bottom" : "object-cover"}`}
           style={{
             objectFit: "cover",
             transform: isHovered ? `scale(${baseScale + 0.05})` : `scale(${baseScale})`,

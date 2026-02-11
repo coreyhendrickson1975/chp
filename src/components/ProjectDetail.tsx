@@ -40,7 +40,7 @@ export function ProjectDetail({
               <img
                 src={src || "/placeholder.svg"}
                 alt={`${project.title} — image ${index + 1}`}
-                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${project.slug === "camphill-foundation" ? "scale-105 group-hover:scale-110" : "group-hover:scale-105"} ${index === project.gallery.length - 1 && project.slug === "woodstock-inn-and-resort" ? "object-bottom" : ""}`}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${project.slug === "camphill-foundation" ? "scale-105 group-hover:scale-110" : "group-hover:scale-105"} ${index === 11 && project.slug === "woodstock-inn-and-resort" ? "object-bottom" : ""}`}
                 loading={index < 3 ? "eager" : "lazy"}
               />
             </div>
