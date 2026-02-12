@@ -56,7 +56,7 @@ function PortfolioCard({
 
 export function PortfolioGrid() {
   return (
-    <section className="px-6 pb-24 md:px-10 lg:px-20">
+    <section id="work" className="scroll-mt-24 px-6 pb-24 md:px-10 lg:px-20">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-8">
         {projects.map((project, index) => (
           <PortfolioCard

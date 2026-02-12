@@ -16,6 +16,12 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-5">
             <a
+              href="/#work"
+              className="hidden text-xs font-medium uppercase tracking-widest text-foreground transition-opacity hover:opacity-60 md:inline-block"
+            >
+              Work
+            </a>
+            <a
               href="/process"
               className="hidden text-xs font-medium uppercase tracking-widest text-foreground transition-opacity hover:opacity-60 md:inline-block"
             >
@@ -66,6 +72,13 @@ export function SiteHeader() {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-background pt-20 md:hidden">
+          <a
+            href="/#work"
+            className="text-sm uppercase tracking-widest text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            Work
+          </a>
           <a
             href="/process"
             className="text-sm uppercase tracking-widest text-foreground"
