@@ -5,9 +5,27 @@ import '../styles/globals.css';
 interface Props {
   title: string;
   description: string;
+  image?: string;
+  type?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, image, type = 'website' } = Astro.props;
+
+const siteName = 'Corey Hendrickson Productions';
+const siteUrl = 'https://coreyhendrickson.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = image
+  ? new URL(image, siteUrl).href
+  : `${siteUrl}/images/middlebury/Middlebury-College-Vermont0001.jpg`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteName,
+  url: siteUrl,
+  description: 'Hand-lettering, illustration, and creative direction.',
+  logo: `${siteUrl}/favicon.svg`,
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +34,32 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5f0eb" />
     <meta name="description" content={description} />
+    <meta name="keywords" content="Vermont Video Production, Vermont Film Crew, Vermont Filmmaker, Vermont DP, documentary film production, documentary, interview, new england film production, new england film director, non-fiction cinematographer, cinematographer, vermont storytelling, vermont brand films, new england, vermont, middlebury, corey hendrickson, doc film, film director" />
     <title>{title}</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class="font-sans antialiased">
     <slot />

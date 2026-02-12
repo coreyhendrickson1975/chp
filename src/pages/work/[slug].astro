@@ -23,7 +23,7 @@ const title = `${project.title} — Corey Hendrickson Productions`;
 const description = project.description[0]?.slice(0, 160) || '';
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={project.image} type="article">
   <SiteHeader client:load />
   <main>
     <ProjectDetail project={project} nextProject={nextProject} client:load />
