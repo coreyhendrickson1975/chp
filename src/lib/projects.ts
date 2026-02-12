@@ -66,6 +66,9 @@ const yankeeGallery = [
   "/images/yankee/Yankee_Travel_Tourism_0017.jpg",
   "/images/yankee/Yankee_Travel_Tourism_0018.jpg",
   "/images/yankee/Yankee_Travel_Tourism_0019.jpg",
+  "/images/yankee/Yankee_Travel_Tourism0031.jpg",
+  "/images/yankee/Yankee_Travel_Tourism0032.jpg",
+  "/images/yankee/Yankee_Travel_Tourism0033.jpg",
 ];
 
 const boeingGallery = [
@@ -89,6 +92,9 @@ const untappedGallery = [
   "/images/untapped/Kikkan_Randall_Ted_King_Untapped_0006.jpg",
   "/images/untapped/Kikkan_Randall_Ted_King_Untapped_0007.jpg",
   "/images/untapped/Kikkan_Randall_Ted_King_Untapped_0008.jpg",
+  "/images/untapped/Kikkan_Randall_Untapped_0053.jpg",
+  "/images/untapped/Kikkan_Randall_Untapped_0051.jpg",
+  "/images/untapped/Kikkan_Randall_Untapped_0052.jpg",
   "/images/untapped/Kikkan_Randall_Ted_King_Untapped_0009.jpg",
 ];
 
@@ -183,7 +189,7 @@ export const projects: Project[] = [
   {
     title: "Yankee Publishing",
     slug: "yankee-publishing",
-    image: "/images/yankee/Yankee_Travel_Tourism_0001.jpg",
+    image: "/images/yankee/Yankee_Travel_Tourism0032.jpg",
     description: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
