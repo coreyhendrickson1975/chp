@@ -220,8 +220,8 @@ export const projects: Project[] = [
     slug: "woodstock-inn-and-resort",
     image: "/images/woodstock-inn/Woodstock-Inn-Vermont-0001.jpg",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "For the Woodstock Inn and Resort, we developed a comprehensive library of marketing materials, including short-form videos and still photography that captured the full spectrum of the guest experience. The challenge was maintaining a consistent visual style and brand identity across dramatically different environments: from the energy of the ski hill to the serenity of the spa, from fine dining spaces to outdoor adventures.",
+      "Working within the resort's established branding and concept guidelines, we created content that felt cohesive regardless of setting. Whether directing professional models or local talent, we ensured that every subject understood the vision and felt comfortable on camera, creating an atmosphere where authenticity and polish could coexist. The result was a versatile content suite that reinforced the Woodstock Inn & Resort brand while showcasing the diverse experiences that define the property.",
     ],
     gallery: woodstockInnGallery,
     galleryAspectRatio: "2.35/1",
