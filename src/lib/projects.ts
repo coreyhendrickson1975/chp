@@ -290,11 +290,13 @@ export const projects: Project[] = [
   {
     title: "Untapped",
     slug: "untapped",
+    subtitle: "Kikkan Randall & Ted King take on the Birkie",
     image: "/images/untapped/Kikkan_Randall_Ted_King_Untapped_0001.jpg",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "We set out to create a brand film with humor, purpose, and a clear narrative arc: follow former professional cyclist Ted King as he learns cross-country skiing from Olympic legend Kikkan Randall, culminating in a race at the famous American Birkebeiner. The plan was straightforward. Start with a roller ski lesson on pavement in New Hampshire, track Ted's learning curve as he transitions from wheels to snow in Vermont, and document his seemingly limitless cardio fitness carrying him through a 50-kilometer test in Wisconsin. It was going to be a feel-good story about athletic versatility and expert coaching.",
+      "Then Ted broke his arm at a bike race. Suddenly, all bets were off. The film could have ended there, but Ted recovered as fast as he bikes, and we pivoted with him. What emerged was something better than the original plan: a story with real stakes and unexpected drama. We followed Ted to Wisconsin and captured his first-ever cross-country ski race, all 50 kilometers of it, one arm held together with hardware. As a brand film for Untapped, we wove in the role of nutrition in his recovery and performance, including fun footage from the Untapped expo booth at the race. The result was authentic, unpredictable, and exactly what great branded content should be.",
     ],
+    keywords: "Kikkan Randall, Ted King, American Birkebeiner, Brand Film, Untapped, Branded Documentary, Athletes film, Sports filmmaker, Maple, Fischer Skis, Birkie, Vermont, Nordic",
     gallery: untappedGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
