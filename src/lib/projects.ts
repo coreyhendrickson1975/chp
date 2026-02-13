@@ -6,6 +6,7 @@ export interface Project {
   gallery: string[];
   galleryAspectRatio?: string;
   videoUrl?: string;
+  hidden?: boolean;
 }
 
 const middleburyGallery = [
@@ -242,6 +243,16 @@ export const projects: Project[] = [
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
+    title: "Ramen Day",
+    slug: "ramen-day",
+    image: "/images/ramen-day/Ramen_Day_0006.jpg",
+    description: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
+    ],
+    gallery: ramenDayGallery,
+    galleryAspectRatio: "2.35/1",
+  },
+  {
     title: "Boeing",
     slug: "boeing",
     image: "/images/boeing/Boeing_0007.jpg",
@@ -251,6 +262,7 @@ export const projects: Project[] = [
     ],
     gallery: boeingGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    hidden: true,
   },
   {
     title: "NBC",
@@ -285,16 +297,6 @@ export const projects: Project[] = [
     ],
     gallery: untappedGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
-  {
-    title: "Ramen Day",
-    slug: "ramen-day",
-    image: "/images/ramen-day/Ramen_Day_0006.jpg",
-    description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-    ],
-    gallery: ramenDayGallery,
-    galleryAspectRatio: "2.35/1",
   },
   {
     title: "Vermont Housing & Conservation Board",
