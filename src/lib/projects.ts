@@ -197,8 +197,7 @@ export const projects: Project[] = [
     slug: "middlebury-college",
     image: "/images/middlebury/Middlebury-College-Vermont0001.jpg",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "\"Working with Corey Hendrickson Productions to document the Bread Loaf Writers' Conferences has been an outstanding experience. Despite the intensive schedule of both programs, Corey had a remarkable ability to make our participants feel comfortable on camera, drawing out authentic, personal reflections from people of all different backgrounds. The collaborative editing process was equally impressive—Corey worked closely with all of us on staff to ensure each final piece captured the unique essence and spirit of the conferences. These films genuinely represent what makes Bread Loaf special and we are proud to feature them on our website and promotional materials.\" - Jennifer Grotz, Director of the Bread Loaf Writers' Conferences",
     ],
     gallery: middleburyGallery,
     galleryAspectRatio: "16/9",
