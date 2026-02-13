@@ -244,7 +244,7 @@ export const projects: Project[] = [
     subtitle: "The Vermont Everyone Eats Story",
     image: "/images/ramen-day/Ramen_Day_111.webp",
     description: [
-      "Ramen Day was a documentary film produced for SEVCA (Southeast Vermont Community Action) that captured a groundbreaking, statewide approach to battling food insecurity. The film was shown to communities around Vermont and accepted into festivals around the globe. It won awards at both the Luleå International Film Festival in Sweden and the Better Cities Film Festival in Detroit, Michigan. It was also an official selection for the International Social Change Film Festival and the Activists Without Borders Film Festival. Lastly, it won Silver in the short documentary category of the Telly Awards.",
+      "Ramen Day was a documentary film produced for SEVCA (Southeast Vermont Community Action) that captured a groundbreaking, statewide approach to battling food insecurity. The film was shown to communities around Vermont and accepted into festivals around the globe. It won awards at both the Luleå International Film Festival in Sweden and the Better Cities Film Festival in Detroit, Michigan. It was also an official selection for the International Social Change Film Festival in Chicago and the Activists Without Borders Film Festival in the UK. Lastly, it won Silver in the short documentary category of the Telly Awards.",
     ],
     keywords: "food insecurity, social justice, hunger, food justice, documentary film, nutrition, Vermont, community action, film festival, Telly Awards",
     gallery: ramenDayGallery,
