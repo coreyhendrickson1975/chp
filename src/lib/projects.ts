@@ -175,24 +175,18 @@ const camphillGallery = [
 ];
 
 const ramenDayGallery = [
-  "/images/ramen-day/Ramen_Day_0001.jpg",
   "/images/ramen-day/ramen_day_110.webp",
   "/images/ramen-day/Ramen_Day_0003.jpg",
   "/images/ramen-day/Ramen_Day_0004.jpg",
   "/images/ramen-day/Ramen_Day_114.webp",
   "/images/ramen-day/Ramen_Day_111.webp",
-  "/images/ramen-day/Ramen_Day_0007.jpg",
   "/images/ramen-day/Ramen_Day_0008.jpg",
   "/images/ramen-day/Ramen_Day_0009.jpg",
   "/images/ramen-day/Ramen_Day_0011.jpg",
   "/images/ramen-day/Ramen_Day_Frames_112.webp",
-  "/images/ramen-day/Ramen_Day_0012.jpg",
   "/images/ramen-day/Ramen_Day_113.webp",
   "/images/ramen-day/Ramen_Day_0014.jpg",
-  "/images/ramen-day/Ramen_Day_0015.jpg",
   "/images/ramen-day/Ramen_Day_119.webp",
-  "/images/ramen-day/Ramen_Day_0017.jpg",
-  "/images/ramen-day/Ramen_Day_0018.jpg",
 ];
 
 export const projects: Project[] = [
