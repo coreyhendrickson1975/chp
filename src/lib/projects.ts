@@ -199,6 +199,7 @@ export const projects: Project[] = [
     description: [
       "\"Working with Corey Hendrickson Productions to document the Bread Loaf Writers' Conferences has been an outstanding experience. Despite the intensive schedule of both programs, Corey had a remarkable ability to make our participants feel comfortable on camera, drawing out authentic, personal reflections from people of all different backgrounds. The collaborative editing process was equally impressive—Corey worked closely with all of us on staff to ensure each final piece captured the unique essence and spirit of the conferences. These films genuinely represent what makes Bread Loaf special and we are proud to feature them on our website and promotional materials.\" - Jennifer Grotz, Director of the Bread Loaf Writers' Conferences",
     ],
+    keywords: "educational filmmaker, university video, vermont college films, education, vermont film production, middlebury, university of vermont, dartmouth, video production for academia, university media, college media",
     gallery: middleburyGallery,
     galleryAspectRatio: "16/9",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -208,8 +209,8 @@ export const projects: Project[] = [
     slug: "yankee-publishing",
     image: "/images/yankee/Yankee_Travel_Tourism0032.jpg",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "In partnership with Yankee Publishing, we produced a series of custom content pieces for the Maine Office of Tourism. The work required us to dig beneath the surface of postcard-perfect New England to find the people who truly make these places tick, from Caribou to Kennebunk. These were documentary-style portraits that let people tell their own stories in their own words. Each project was built around genuine conversations: the kind where a conservationist's weathered field notes tell as much of the story as their words, or where an oyster farmer's skiff becomes a character in itself.",
+      "The locations themselves often became central to the narrative. A windswept lighthouse in Maine wasn't just a backdrop; it shaped the keeper's daily rhythm and worldview. A hillside blueberry farm didn't just look beautiful; it explained why someone would choose this particular hard work in this particular soil. We used strong b-roll to build depth in the story world: close-ups of weathered tools, wide shots that established geography and community, moments of process that revealed dedication. The result was content that felt true to Maine: unpretentious, rooted, and real.",
     ],
     gallery: yankeeGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
