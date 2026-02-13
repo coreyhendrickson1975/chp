@@ -267,10 +267,10 @@ export const projects: Project[] = [
   {
     title: "NBC",
     slug: "nbc",
+    subtitle: "Run Back the Miracle",
     image: "/images/nbc/MIRACLE_ON_ICE_0003.jpg",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "<a href=\"https://www.frequencypictures.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Frequency Pictures</a> partnered with Corey Hendrickson Productions to document the production of Run Back the Miracle, a half-hour Peacock special featuring Al Michaels revisiting the iconic 1980 \"Miracle on Ice\" hockey game. We assembled a talented, nimble crew of three cinematographers, two location sound recordists, and two versatile production assistants to capture behind-the-scenes footage of the large-scale projection installation that brought historic game footage back to the Herb Brooks arena, as well as establishing shots of the Lake Placid, New York area. I worked closely with local equipment rental houses to augment our lighting and grip package, ensuring we had the resources needed for both the technical demands of filming the projection setup and showcasing the location's historical significance. I also served as colorist for the 90-second overview video.",
     ],
     gallery: nbcGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",

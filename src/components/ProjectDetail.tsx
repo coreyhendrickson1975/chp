@@ -26,9 +26,8 @@ export function ProjectDetail({
             <p
               key={index}
               className="text-base leading-relaxed text-muted-foreground"
-            >
-              {paragraph}
-            </p>
+              dangerouslySetInnerHTML={{ __html: paragraph }}
+            />
           ))}
         </div>
       </section>
