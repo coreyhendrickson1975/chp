@@ -173,6 +173,27 @@ const camphillGallery = [
   "/images/camphill/Camphill_Foundation_0012.jpg",
 ];
 
+const ramenDayGallery = [
+  "/images/ramen-day/Ramen_Day_0001.jpg",
+  "/images/ramen-day/Ramen_Day_0002.jpg",
+  "/images/ramen-day/Ramen_Day_0003.jpg",
+  "/images/ramen-day/Ramen_Day_0004.jpg",
+  "/images/ramen-day/Ramen_Day_0005.jpg",
+  "/images/ramen-day/Ramen_Day_0006.jpg",
+  "/images/ramen-day/Ramen_Day_0007.jpg",
+  "/images/ramen-day/Ramen_Day_0008.jpg",
+  "/images/ramen-day/Ramen_Day_0009.jpg",
+  "/images/ramen-day/Ramen_Day_0011.jpg",
+  "/images/ramen-day/Ramen_Day_0010.jpg",
+  "/images/ramen-day/Ramen_Day_0012.jpg",
+  "/images/ramen-day/Ramen_Day_0013.jpg",
+  "/images/ramen-day/Ramen_Day_0014.jpg",
+  "/images/ramen-day/Ramen_Day_0015.jpg",
+  "/images/ramen-day/Ramen_Day_0016.jpg",
+  "/images/ramen-day/Ramen_Day_0017.jpg",
+  "/images/ramen-day/Ramen_Day_0018.jpg",
+];
+
 export const projects: Project[] = [
   {
     title: "Middlebury College",
@@ -264,6 +285,16 @@ export const projects: Project[] = [
     ],
     gallery: untappedGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
+  {
+    title: "Ramen Day",
+    slug: "ramen-day",
+    image: "/images/ramen-day/Ramen_Day_0006.jpg",
+    description: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
+    ],
+    gallery: ramenDayGallery,
+    galleryAspectRatio: "2.35/1",
   },
   {
     title: "Vermont Housing & Conservation Board",

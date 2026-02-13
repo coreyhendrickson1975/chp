@@ -29,7 +29,7 @@ function PortfolioCard({
         <img
           src={image || "/placeholder.svg"}
           alt={title}
-          className={`absolute inset-0 h-full w-full transition-transform duration-700 ease-out ${slug === "camphill-foundation" ? "object-top" : slug === "vermont-housing-and-conservation-board" ? "object-bottom" : "object-cover"}`}
+          className={`absolute inset-0 h-full w-full transition-transform duration-700 ease-out ${slug === "camphill-foundation" ? "object-top" : slug === "vermont-housing-and-conservation-board" ? "object-bottom" : "object-cover object-center"}`}
           style={{
             objectFit: "cover",
             transform: isHovered ? `scale(${baseScale + 0.05})` : `scale(${baseScale})`,
@@ -66,7 +66,7 @@ export function PortfolioGrid() {
             image={project.image}
             priority={index < 3}
             aspectRatio={index < 3 ? "cinematic" : "video"}
-            baseScale={project.slug === "camphill-foundation" ? 1.1 : project.slug === "woodstock-inn-and-resort" ? 1.05 : 1}
+            baseScale={project.slug === "camphill-foundation" ? 1.1 : project.slug === "woodstock-inn-and-resort" ? 1.05 : project.slug === "ramen-day" ? 1.4 : 1}
           />
         ))}
       </div>
