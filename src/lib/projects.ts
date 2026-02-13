@@ -230,10 +230,11 @@ export const projects: Project[] = [
   {
     title: "PBS",
     slug: "pbs",
+    subtitle: "Weekends With Yankee",
     image: "/images/pbs/Weekends_With_Yankee_0031.jpg",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Weekends With Yankee is an award-winning national PBS program that reaches 95% of the PBS marketplace, bringing New England stories to millions of viewers across the country. Over the course of 10 seasons, my role on the show has evolved from cinematographer to earning credits as director of photography, producer, and editor. Production days require efficiency and versatility: I direct Amy Traverso and Richard Wiese and guest talent, keeping one ear on the dialogue while mentally cataloging what b-roll we'll need to support each interview. I wear multiple hats, managing the film crew while also operating a camera and shaping the visual narrative in real time. It's fast-paced work that demands both technical precision and an instinct for storytelling. After the filming is done, I turn the days worth of footage into a stringout, transcribe everything and assemble the paper cut... transforming 10 hours of work into 10 minutes of television.",
+      "What has made this decade long journey particularly meaningful is the education it provided. Each episode became a deep dive into a corner of New England I might not have otherwise explored. I learned about the region's craft traditions, culinary innovations, hidden landscapes, and the people who steward them. The show didn't just document these places; it gave me a relationship with them. I've often returned to locations we featured with my family, seeing them through new eyes and sharing what I'd learned behind the camera.",
     ],
     gallery: pbsGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
