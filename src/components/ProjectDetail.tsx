@@ -15,6 +15,11 @@ export function ProjectDetail({
         <h1 className="mb-10 text-balance text-3xl font-medium tracking-tight text-foreground md:text-4xl">
           {project.title}
         </h1>
+        {project.subtitle && (
+          <p className="-mt-6 mb-10 text-sm tracking-wide text-muted-foreground">
+            {project.subtitle}
+          </p>
+        )}
 
         <div className="space-y-6">
           {project.description.map((paragraph, index) => (
