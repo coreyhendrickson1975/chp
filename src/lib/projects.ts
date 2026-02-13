@@ -280,8 +280,8 @@ export const projects: Project[] = [
     slug: "camphill-foundation",
     image: "/images/camphill/Camphill_Foundation_0010.jpg",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Et tortor at risus viverra adipiscing at in tellus integer. Integer vitae justo eget magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "For the Camphill Foundation's 60th anniversary gala in New York City, we created a film that honored both the organization's history and its future. The challenge was weaving together two narratives: the story of the Pietzner family bringing the Camphill movement to North America and the ongoing importance of supporting the Foundation's work today. We made a deliberate creative choice to shoot contemporary interviews with a formal aesthetic that paid homage to the gorgeous 16mm archival footage from Camphill's early years.",
+      "This bridging of eras extended into the color grade, where we carefully balanced newly captured material with archival content from Corey Hendrickson Productions' ten-year history of filming for Camphill communities. The result was a film that felt both timeless and immediate, connecting the founding vision to present-day impact. Presented to a live audience at the gala, the piece served as both a celebration of legacy and a call to continue building the movement.",
     ],
     gallery: camphillGallery,
     galleryAspectRatio: "1.33/1",
