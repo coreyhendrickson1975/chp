@@ -7,6 +7,7 @@ export interface Project {
   galleryAspectRatio?: string;
   videoUrl?: string;
   subtitle?: string;
+  keywords?: string;
   hidden?: boolean;
 }
 
@@ -245,6 +246,7 @@ export const projects: Project[] = [
     description: [
       "Ramen Day was a documentary film produced for SEVCA (Southeast Vermont Community Action) that captured a groundbreaking, statewide approach to battling food insecurity. The film was shown to communities around Vermont and accepted into festivals around the globe. It won awards at both the Luleå International Film Festival in Sweden and the Better Cities Film Festival in Detroit, Michigan. It was also an official selection for the International Social Change Film Festival and the Activists Without Borders Film Festival. Lastly, it won Silver in the short documentary category of the Telly Awards.",
     ],
+    keywords: "food insecurity, social justice, hunger, food justice, documentary film, nutrition, Vermont, community action, film festival, Telly Awards",
     gallery: ramenDayGallery,
     galleryAspectRatio: "2.35/1",
   },
@@ -312,7 +314,8 @@ export function getProjectBySlug(slug: string): Project | undefined {
 }
 
 export function getNextProject(slug: string): Project | undefined {
-  const index = projects.findIndex((p) => p.slug === slug);
+  const visible = projects.filter((p) => !p.hidden);
+  const index = visible.findIndex((p) => p.slug === slug);
   if (index === -1) return undefined;
-  return projects[(index + 1) % projects.length];
+  return visible[(index + 1) % visible.length];
 }

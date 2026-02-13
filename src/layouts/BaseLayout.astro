@@ -8,13 +8,17 @@ interface Props {
   description: string;
   image?: string;
   type?: string;
+  keywords?: string;
 }
 
-const { title, description, image, type = 'website' } = Astro.props;
+const { title, description, image, type = 'website', keywords } = Astro.props;
 
 const siteName = 'Corey Hendrickson Productions';
 const siteUrl = 'https://coreyhendrickson.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const siteKeywords = "Vermont Video Production, Vermont Film Crew, Vermont Filmmaker, Vermont DP, documentary film production, documentary, interview, new england film production, new england film director, non-fiction cinematographer, cinematographer, vermont storytelling, vermont brand films, new england, vermont, middlebury, corey hendrickson, doc film, film director";
+const metaKeywords = keywords ? `${keywords}, ${siteKeywords}` : siteKeywords;
+
 const ogImage = image
   ? new URL(image, siteUrl).href
   : `${siteUrl}/images/middlebury/Middlebury-College-Vermont0001.jpg`;
@@ -35,7 +39,7 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5f0eb" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Vermont Video Production, Vermont Film Crew, Vermont Filmmaker, Vermont DP, documentary film production, documentary, interview, new england film production, new england film director, non-fiction cinematographer, cinematographer, vermont storytelling, vermont brand films, new england, vermont, middlebury, corey hendrickson, doc film, film director" />
+    <meta name="keywords" content={metaKeywords} />
     <title>{title}</title>
 
     <!-- Canonical -->
