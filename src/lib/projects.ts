@@ -295,7 +295,7 @@ export const projects: Project[] = [
   {
     title: "Untapped",
     slug: "untapped",
-    subtitle: "Kikkan Randall & Ted King take on the Birkie",
+    subtitle: "Kikkan Randall helps Ted King take on the Birkie",
     image: "/images/untapped/Kikkan_Randall_Ted_King_Untapped_0001.jpg",
     description: [
       "We set out to create a brand film with humor, purpose, and a clear narrative arc: follow former professional cyclist Ted King as he learns cross-country skiing from Olympic legend Kikkan Randall, culminating in a race at the famous American Birkebeiner. The plan was straightforward. Start with a roller ski lesson on pavement in New Hampshire, track Ted's learning curve as he transitions from wheels to snow in Vermont, and document his seemingly limitless cardio fitness carrying him through a 50-kilometer test in Wisconsin. It was going to be a feel-good story about athletic versatility and expert coaching.",
