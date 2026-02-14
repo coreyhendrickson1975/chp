@@ -144,6 +144,9 @@ const nbcGallery = [
   "/images/nbc/MIRACLE_ON_ICE_0008.jpg",
   "/images/nbc/MIRACLE_ON_ICE_0007.jpg",
   "/images/nbc/MIRACLE_ON_ICE_0010.jpg",
+  "/images/nbc/MIRACLE_ON_ICE_0032.jpg",
+  "/images/nbc/MIRACLE_ON_ICE_0031.jpg",
+  "/images/nbc/MIRACLE_ON_ICE_0033.jpg",
 ];
 
 const vhcbGallery = [
@@ -195,6 +198,7 @@ export const projects: Project[] = [
   {
     title: "Middlebury College",
     slug: "middlebury-college",
+    subtitle: "Bread Loaf Writers' Conferences",
     image: "/images/middlebury/Middlebury-College-Vermont0001.jpg",
     description: [
       "\"Working with Corey Hendrickson Productions to document the Bread Loaf Writers' Conferences has been an outstanding experience. Despite the intensive schedule of both programs, Corey had a remarkable ability to make our participants feel comfortable on camera, drawing out authentic, personal reflections from people of all different backgrounds. The collaborative editing process was equally impressive—Corey worked closely with all of us on staff to ensure each final piece captured the unique essence and spirit of the conferences. These films genuinely represent what makes Bread Loaf special and we are proud to feature them on our website and promotional materials.\" - Jennifer Grotz, Director of the Bread Loaf Writers' Conferences",
@@ -207,6 +211,7 @@ export const projects: Project[] = [
   {
     title: "Yankee Publishing",
     slug: "yankee-publishing",
+    subtitle: "Custom Travel & Tourism content",
     image: "/images/yankee/Yankee_Travel_Tourism0032.jpg",
     description: [
       "In partnership with Yankee Publishing, we produced a series of custom content pieces for the Maine Office of Tourism. The work required us to dig beneath the surface of postcard-perfect New England to find the people who truly make these places tick, from Caribou to Kennebunk. These were documentary-style portraits that let people tell their own stories in their own words. Each project was built around genuine conversations: the kind where a conservationist's weathered field notes tell as much of the story as their words, or where an oyster farmer's skiff becomes a character in itself.",
