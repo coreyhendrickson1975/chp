@@ -2,6 +2,28 @@ import { useState } from "react";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/maqdojnq", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    }
+  }
 
   if (submitted) {
     return (
@@ -18,12 +40,12 @@ export function ContactForm() {
 
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
+      onSubmit={handleSubmit}
       className="mt-12 flex flex-col gap-6"
     >
+      {error && (
+        <p className="text-sm text-red-600">Something went wrong. Please try again.</p>
+      )}
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex flex-col gap-2">
           <label
