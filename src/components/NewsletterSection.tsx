@@ -4,11 +4,25 @@ import { useState } from "react";
 export function NewsletterSection() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (email.trim()) {
-      setSubmitted(true);
+    if (!email.trim()) return;
+
+    try {
+      const res = await fetch("https://formspree.io/f/maqdojnq", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
     }
   }
 
@@ -24,6 +38,8 @@ export function NewsletterSection() {
 
         {submitted ? (
           <p className="text-sm font-medium text-foreground">Thank you!</p>
+        ) : error ? (
+          <p className="text-sm text-red-600">Something went wrong. Please try again.</p>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
