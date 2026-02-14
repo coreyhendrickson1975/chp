@@ -7,45 +7,90 @@ import { SiteHeader } from '../components/SiteHeader';
 <BaseLayout title="About — Corey Hendrickson Productions" description="Learn more about Corey Hendrickson Productions — two decades of story-driven film production based in Vermont, working throughout New England and beyond.">
   <SiteHeader client:load />
   <main class="pt-24 pb-20">
+    <!-- Team Section -->
+    <div class="mx-auto max-w-5xl px-6 md:px-10 mb-24">
+      <h2 class="mb-12 text-xs font-medium uppercase tracking-widest text-foreground">
+        The Team
+      </h2>
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="relative aspect-[3/4] w-full overflow-hidden bg-muted mb-4">
+            <img
+              src="/images/corey-hendrickson-portrait.jpg"
+              alt="Corey Hendrickson"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <h3 class="text-sm font-medium text-foreground">Corey Hendrickson</h3>
+          <p class="text-xs text-muted-foreground mt-1">Producer / Director / Editor</p>
+        </div>
+        <div>
+          <div class="relative aspect-[3/4] w-full overflow-hidden bg-muted mb-4">
+            <img
+              src="/images/team/placeholder-1.jpg"
+              alt="Ivar Bastress"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="text-sm font-medium text-foreground">Ivar Bastress</h3>
+          <p class="text-xs text-muted-foreground mt-1">Cinematographer / Photographer</p>
+        </div>
+        <div>
+          <div class="relative aspect-[3/4] w-full overflow-hidden bg-muted mb-4">
+            <img
+              src="/images/team/placeholder-2.jpg"
+              alt="Team member"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="text-sm font-medium text-foreground">Team Member Name</h3>
+          <p class="text-xs text-muted-foreground mt-1">Sound Recordist</p>
+        </div>
+        <div>
+          <div class="relative aspect-[3/4] w-full overflow-hidden bg-muted mb-4">
+            <img
+              src="/images/team/placeholder-3.jpg"
+              alt="Team member"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="text-sm font-medium text-foreground">Team Member Name</h3>
+          <p class="text-xs text-muted-foreground mt-1">Production Assistant</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Copy -->
     <div class="mx-auto max-w-5xl px-6 md:px-10">
-      <div class="grid gap-12 md:grid-cols-[1fr_2fr] md:gap-16 lg:gap-20">
-        <div class="relative aspect-[3/4] w-full overflow-hidden">
-          <img
-            src="/images/corey-hendrickson-portrait.jpg"
-            alt="Corey Hendrickson in the studio"
-            class="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-          />
-        </div>
+      <h1 class="mb-8 text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
+        About
+      </h1>
+      <div class="max-w-3xl space-y-6 text-sm leading-relaxed text-muted-foreground md:text-base">
+        <p>
+          I started Corey Hendrickson Productions in 2005. For two decades I have specialized in creating story-driven projects that help organizations and brands grow and connect with their audiences. In the field, I find common ground with folks easily, travel light and build crews that are nimble. I believe the best work happens when creativity meets intention, when every frame serves the story, and when that story rings true to those represented.
+        </p>
+        <p>
+          My experience producing, directing and editing has me trained to filter creative decisions through the story, not the spreadsheet. Whether in preproduction or behind the camera, my mind is always working towards the edit. Working with talented collaborators, I've produced, directed, and edited projects that have aired nationally and won recognition, but what drives me isn't the accolades. It's the opportunity to collaborate with people who have something meaningful to share and to help them reach the audiences who need to hear it.
+        </p>
+        <p>
+          Based in Vermont, I work throughout New England and beyond, bringing stories to life for clients who value craft, connection, and impact. I live with my wife and two kids, and when I'm not working, you'll find me XC skiing, biking, or backpacking—always with a camera in hand. My personal photography can be viewed at <a href="https://vermontcorey.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 transition-opacity hover:opacity-60">vermontcorey.com</a>.
+        </p>
+      </div>
 
-        <div class="flex flex-col justify-center">
-          <h1 class="mb-8 text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
-            About Me
-          </h1>
-          <div class="space-y-6 text-sm leading-relaxed text-muted-foreground md:text-base">
-            <p>
-              I started Corey Hendrickson Productions in 2005. For two decades I have specialized in creating story-driven projects that help organizations and brands grow and connect with their audiences. In the field, I find common ground with folks easily, travel light and build crews that are nimble. I believe the best work happens when creativity meets intention, when every frame serves the story, and when that story rings true to those represented.
-            </p>
-            <p>
-              My experience producing, directing and editing has me trained to filter creative decisions through the story, not the spreadsheet. Whether in preproduction or behind the camera, my mind is always working towards the edit. Working with talented collaborators, I've produced, directed, and edited projects that have aired nationally and won recognition, but what drives me isn't the accolades. It's the opportunity to collaborate with people who have something meaningful to share and to help them reach the audiences who need to hear it.
-            </p>
-            <p>
-              Based in Vermont, I work throughout New England and beyond, bringing stories to life for clients who value craft, connection, and impact. I live with my wife and two kids, and when I'm not working, you'll find me XC skiing, biking, or backpacking—always with a camera in hand. My personal photography can be viewed at <a href="https://vermontcorey.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 transition-opacity hover:opacity-60">vermontcorey.com</a>.
-            </p>
-          </div>
-
-          <div class="mt-10 border-t border-border pt-10">
-            <h2 class="mb-4 text-xs font-medium uppercase tracking-widest text-foreground">
-              Get in Touch
-            </h2>
-            <a
-              href="mailto:studio@coreyhendrickson.com"
-              class="text-sm text-muted-foreground underline underline-offset-4 transition-opacity hover:opacity-60"
-            >
-              studio@coreyhendrickson.com
-            </a>
-          </div>
-        </div>
+      <div class="mt-16 border-t border-border pt-10">
+        <h2 class="mb-4 text-xs font-medium uppercase tracking-widest text-foreground">
+          Get in Touch
+        </h2>
+        <a
+          href="mailto:studio@coreyhendrickson.com"
+          class="text-sm text-muted-foreground underline underline-offset-4 transition-opacity hover:opacity-60"
+        >
+          studio@coreyhendrickson.com
+        </a>
       </div>
     </div>
   </main>
