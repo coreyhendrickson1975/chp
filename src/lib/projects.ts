@@ -214,7 +214,7 @@ export const projects: Project[] = [
   {
     title: "Yankee Publishing",
     slug: "yankee-publishing",
-    subtitle: "Custom Travel & Tourism short films",
+    subtitle: "Custom short films for travel & tourism",
     image: "/images/yankee/Yankee_Travel_Tourism0032.jpg",
     description: [
       "In partnership with Yankee Publishing, we produced a series of custom content pieces for the Maine Office of Tourism. The work required us to dig beneath the surface of postcard-perfect New England to find the people who truly make these places tick, from Caribou to Kennebunk. These were documentary-style portraits that let people tell their own stories in their own words. Each project was built around genuine conversations: the kind where a conservationist's weathered field notes tell as much of the story as their words, or where an oyster farmer's skiff becomes a character in itself.",
