@@ -139,7 +139,7 @@ const pbsGallery = [
 
 const nbcGallery = [
   "/images/nbc/MIRACLE_ON_ICE_0001.jpg",
-  "/images/nbc/MIRACLE_ON_ICE_0002.jpg",
+  "/images/nbc/Al_Michaels_Lake-Placid_o3.jpg",
   "/images/nbc/MIRACLE_ON_ICE_0003.jpg",
   "/images/nbc/MIRACLE_ON_ICE_0004.jpg",
   "/images/nbc/MIRACLE_ON_ICE_0005.jpg",
