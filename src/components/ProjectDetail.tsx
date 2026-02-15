@@ -52,6 +52,28 @@ export function ProjectDetail({
         </div>
       </section>
 
+      {/* Wistia Videos */}
+      {project.wistiaId && (
+        <section className="px-4 pb-16 md:px-8 md:pb-24 lg:px-12">
+          <div
+            className="mx-auto max-w-5xl space-y-6"
+            dangerouslySetInnerHTML={{
+              __html: (() => {
+                const ids = Array.isArray(project.wistiaId) ? project.wistiaId : [project.wistiaId];
+                return `
+                  <script src="https://fast.wistia.com/player.js" async></script>
+                  ${ids.map(id => `
+                    <script src="https://fast.wistia.com/embed/${id}.js" async type="module"></script>
+                    <style>wistia-player[media-id='${id}']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${id}/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+                    <wistia-player media-id="${id}" aspect="1.7777777777777777"></wistia-player>
+                  `).join('')}
+                `;
+              })(),
+            }}
+          />
+        </section>
+      )}
+
       {/* Next project navigation */}
       {nextProject && <NextProjectLink project={nextProject} />}
     </article>

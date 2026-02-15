@@ -6,6 +6,7 @@ export interface Project {
   gallery: string[];
   galleryAspectRatio?: string;
   videoUrl?: string;
+  wistiaId?: string | string[];
   subtitle?: string;
   keywords?: string;
   hidden?: boolean;
@@ -235,7 +236,7 @@ export const projects: Project[] = [
     keywords: "luxury resort video production, hotel marketing video, resort brand film, hospitality filmmaker, luxury hotel content, resort photography, ski resort video, spa video production, fine dining film, Woodstock Inn, Vermont luxury resort, hospitality marketing, resort cinematographer, hotel brand content, luxury travel video",
     gallery: woodstockInnGallery,
     galleryAspectRatio: "2.35/1",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    wistiaId: ["8rmon31dsv", "6lodr6l7om"],
   },
   {
     title: "PBS",
