@@ -7,16 +7,24 @@ import { ContactForm } from '../components/ContactForm';
 
 <BaseLayout title="Contact — Corey Hendrickson Productions" description="Get in touch with Corey Hendrickson Productions for film production, documentary, brand films, and video projects in Vermont and New England.">
   <SiteHeader client:load />
-  <main class="px-6 pt-32 pb-24 md:px-10">
-    <div class="mx-auto max-w-2xl">
-      <h1 class="text-4xl font-medium tracking-tight text-foreground md:text-5xl text-balance">
-        Get in Touch
-      </h1>
-      <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
-        Have a project in mind or just want to say hello? Fill out the form
-        below and I'll get back to you as soon as possible.
-      </p>
+  <div class="relative w-full overflow-hidden" style="aspect-ratio: 2.35 / 1;">
+    <img src="/images/Camden_MaineBTS_0007.jpg" alt="Camden, Maine behind the scenes" class="absolute inset-0 h-full w-full object-cover object-[center_30%]" loading="eager" />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-10">
+      <div class="mx-auto max-w-2xl w-full">
+        <h1 class="text-3xl font-medium tracking-tight text-white md:text-4xl lg:text-5xl text-balance">
+          Get in Touch
+        </h1>
+        <p class="mt-4 text-sm leading-relaxed text-white/80 md:text-base">
+          Have a project in mind or just want to say hello? Fill out the form
+          below and I'll get back to you as soon as possible.
+        </p>
+      </div>
+    </div>
+  </div>
 
+  <main class="px-6 pt-12 pb-24 md:px-10">
+    <div class="mx-auto max-w-2xl">
       <ContactForm client:visible />
 
       <div class="mt-20 border-t border-border pt-12">
