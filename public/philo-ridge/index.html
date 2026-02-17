@@ -617,24 +617,24 @@
   .reel-section .section-title { color: var(--white); margin-bottom: 1rem; }
   .reel-section p { color: rgba(255,255,255,0.55); }
 
-  /* ── IMAGE GRID ── */
+  /* ── IMAGE GRID (MASONRY) ── */
   .image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
+    columns: 4;
+    column-gap: 4px;
     margin: 2.5rem 0;
   }
 
   .image-grid .grid-img {
-    aspect-ratio: 3/2;
-    background: linear-gradient(135deg, #4a5540, #3a4530);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255,255,255,0.2);
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    break-inside: avoid;
+    margin-bottom: 4px;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .image-grid .grid-img img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* ── RESPONSIVE ── */
@@ -645,7 +645,7 @@
     .testimonials-grid { grid-template-columns: 1fr; }
     .about-inner { grid-template-columns: 1fr; }
     .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; }
-    .image-grid { grid-template-columns: repeat(2, 1fr); }
+    .image-grid { columns: 2; }
     section { padding: 3.5rem 5vw; }
   }
 
@@ -809,12 +809,18 @@
     </div>
 
     <div class="image-grid">
-      <div class="grid-img"><img src="images/farm_0004.jpg" alt="Farm gallery" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="grid-img"><img src="images/farm_0001.jpg" alt="Farm gallery" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="grid-img"><img src="images/_DSC6432.jpg" alt="Farm gallery" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="grid-img"><img src="images/Ghost_Mall--16.jpg" alt="Farm gallery" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="grid-img">Still 05</div>
-      <div class="grid-img">Still 06</div>
+      <div class="grid-img"><img src="images/farm_0004.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/farm_0001.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC6432.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_O7V9958.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/farm_0137.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC4950.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSF5775.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_O7V9980.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/farm_0138.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_O7V9554.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/20080124_YKE_COW_0010.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/Joes_Brook_Farm-8.webp" alt="Farm gallery"></div>
     </div>
   </div>
 </div>
@@ -827,12 +833,12 @@
     <div class="testimonial-card">
       <p class="testimonial-quote">Working with Corey Hendrickson Productions was such a phenomenal experience for our team! We sought Corey's expertise on a complex, multi-day documentary project to chronicle the lived experience of working lands entrepreneurs we serve in Vermont. Not only was the video footage and photography visually stunning, but Corey was able to connect with each person filmed, his friendly interview style putting folks at ease and allowing them to open up and share their truth. It's evident how much Corey cares about sharing stories authentically and with respect. We couldn't be happier with the outcome of our video, and feel that we've finally been able to create a piece that captures our why.</p>
       <div class="testimonial-author">Mariah Noth</div>
-      <div class="testimonial-role">VHCB</div>
+      <div class="testimonial-role">Vermont Housing &amp; Conservation Board</div>
     </div>
     <div class="testimonial-card">
-      <p class="testimonial-quote">[Client testimonial text here]</p>
-      <div class="testimonial-author">[Client Name]</div>
-      <div class="testimonial-role">[Title, Organization]</div>
+      <p class="testimonial-quote">I have had the pleasure of working with Corey Hendrickson on an ongoing photography project documenting farmers throughout Vermont across all four seasons for the Intervale Center. Corey coordinates and plans each shoot directly with the farmers, requiring both professional skill and a genuine ability to put people at ease in their own environment. His portraits possess a comfort and personal nature that is rare, drawing out authentic expression from subjects who are not accustomed to being photographed. The galleries he delivers consistently include compelling environmental portraits, honest documentary work, and polished product photography, all with a cohesive vision across every frame. He is exactly the kind of collaborator you can trust to represent your subject with authenticity and care.</p>
+      <div class="testimonial-author">Sara Armstrong Donegan</div>
+      <div class="testimonial-role">Intervale Center</div>
     </div>
   </div>
 </section>
