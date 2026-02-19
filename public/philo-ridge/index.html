@@ -658,17 +658,65 @@
 
   /* ── PRINT STYLES ── */
   @media print {
+    /* General */
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 11pt; }
     .sticky-nav { display: none; }
     .btn-download { display: none; }
-    .hero { height: auto; min-height: 400px; page-break-after: always; }
-    section { padding: 2rem 1in; }
-    .media-break { height: 250px; page-break-before: avoid; }
-    .treatment-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .treatment-card { min-width: 100%; }
-    .about-section { background: var(--dark) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .video-container { display: none; }
+
+    /* Page breaks */
+    .hero { height: auto; min-height: 300px; page-break-after: always; }
+    #vision { page-break-after: always; }
+    #treatment { page-break-after: always; }
+    .media-break { display: none; }
     .reel-section { page-break-before: always; }
+    #testimonials { page-break-before: always; }
+    #deliverables { page-break-before: always; }
+    #investment { page-break-before: always; }
+    #about { page-break-before: always; }
+
+    /* Sections */
+    section { padding: 1.5rem 0.75in; }
+    .reel-section { padding: 1.5rem 0.75in; }
+    .reel-inner { max-width: 100%; }
+
+    /* Treatment cards: 2 per row */
+    .treatment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .treatment-card { break-inside: avoid; }
+    .card-img { height: 120px !important; }
+
+    /* Frame grabs: 6 columns to compress */
+    .interview-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 3px;
+      page-break-before: always;
+    }
+    .interview-grid .grid-img { break-inside: avoid; }
+
+    /* Photography samples: 6-column grid */
+    .image-grid {
+      columns: unset;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 3px;
+      page-break-before: always;
+    }
+    .image-grid .grid-img { break-inside: avoid; margin-bottom: 0; }
+
+    /* Gray background section */
+    div[style*="#767676"] {
+      background: #767676 !important;
+      margin: 1rem 0 !important;
+      padding: 1rem 0 !important;
+    }
+
+    /* Section headings */
+    .section-title { break-after: avoid; }
+    h2, h3, h4 { break-after: avoid; }
+
+    /* Colors */
+    .about-section { background: var(--dark) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
 </style>
 </head>
