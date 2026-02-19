@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philo Ridge Farm — Video Production Proposal | Corey Hendrickson</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --cream: #F7F5F0;
+    --dark: #1a1a1a;
+    --olive: #4A5540;
+    --olive-light: #6B7E5E;
+    --warm-gray: #8C8579;
+    --light-gray: #E8E4DE;
+    --accent: #C4A76C;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Roboto Slab', serif;
+    color: var(--dark);
+    background: var(--cream);
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    aspect-ratio: 2.35 / 1;
+    height: auto;
+    min-height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: var(--dark);
+  }
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-media img,
+  .hero-media video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 1;
+  }
+
+  /* Placeholder hero image */
+  .hero-media .placeholder-img {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #3a4a30 0%, #2a3525 40%, #1a2018 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.15);
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .hero-overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(to top right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, transparent 70%);
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 4rem 6vw 5rem;
+    max-width: 900px;
+  }
+
+  .hero-label {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    max-width: 550px;
+  }
+
+  .hero-meta {
+    margin-top: 2.5rem;
+    font-size: 0.75rem;
+    color: var(--white);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247, 245, 240, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    height: 52px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    overflow-x: auto;
+  }
+
+  .sticky-nav a {
+    color: var(--warm-gray);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+  }
+
+  .sticky-nav a:hover { color: var(--olive); }
+
+  .nav-spacer { flex: 1; }
+
+  .btn-download {
+    background: var(--olive);
+    color: var(--white);
+    padding: 0.45rem 1.2rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+  }
+
+  .btn-download:hover { background: var(--olive-light); }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 5rem 6vw;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+
+  p { margin-bottom: 1.2rem; font-size: 0.95rem; color: #3a3a3a; }
+  p:last-child { margin-bottom: 0; }
+
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark);
+    max-width: 680px;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 6vw;
+  }
+
+  .divider hr {
+    border: none;
+    height: 1px;
+    background: var(--light-gray);
+  }
+
+  /* ── FULL-WIDTH IMAGE / VIDEO BREAK ── */
+  .media-break {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .media-break .placeholder-img {
+    width: 100%;
+    height: 50vh;
+    min-height: 350px;
+    background: linear-gradient(135deg, #4a5540 0%, #3a4530 50%, #2a3525 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    gap: 0.75rem;
+  }
+
+  .media-break .placeholder-img svg {
+    width: 48px; height: 48px;
+    stroke: rgba(255,255,255,0.2);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  /* ── VIDEO EMBED ── */
+  .video-container {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 2rem 0 1rem;
+  }
+
+  .video-container iframe,
+  .video-container video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  .video-placeholder {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.3);
+    gap: 1rem;
+  }
+
+  .video-placeholder svg {
+    width: 64px; height: 64px;
+    stroke: rgba(255,255,255,0.25);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .video-placeholder span {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ── TREATMENT CARDS ── */
+  .treatment-grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .treatment-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .treatment-grid::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 3px;
+  }
+
+  .treatment-grid::-webkit-scrollbar-thumb {
+    background: var(--warm-gray);
+    border-radius: 3px;
+  }
+
+  .treatment-card {
+    background: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    min-width: 380px;
+    max-width: 420px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  .treatment-card .card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    background: linear-gradient(135deg, #4a5540, #3a4530);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    gap: 0.5rem;
+  }
+
+  .treatment-card .card-img svg {
+    width: 32px; height: 32px;
+    stroke: rgba(255,255,255,0.2);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .treatment-card .card-body {
+    padding: 1.8rem;
+  }
+
+  .treatment-card h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+  }
+
+  .treatment-card .card-number {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 0.5rem;
+  }
+
+  .treatment-card p {
+    font-size: 0.85rem;
+    color: var(--warm-gray);
+    line-height: 1.65;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    margin-top: 2.5rem;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    padding: 1.8rem 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .timeline-item:last-child { border-bottom: none; }
+
+  .timeline-phase {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--olive);
+    padding-top: 0.15rem;
+  }
+
+  .timeline-detail h4 {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-detail p {
+    font-size: 0.85rem;
+    color: var(--warm-gray);
+    margin-bottom: 0;
+  }
+
+  /* ── DELIVERABLES TABLE ── */
+  .deliverables-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+
+  .deliverables-table th {
+    text-align: left;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--olive);
+    padding: 0.8rem 1rem;
+    border-bottom: 2px solid var(--olive);
+  }
+
+  .deliverables-table td {
+    padding: 1rem;
+    font-size: 0.88rem;
+    border-bottom: 1px solid var(--light-gray);
+    vertical-align: top;
+    color: #3a3a3a;
+  }
+
+  .deliverables-table tr:last-child td { border-bottom: none; }
+
+  /* ── INVESTMENT ── */
+  .investment-box {
+    background: var(--white);
+    border-radius: 4px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+
+  .investment-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--light-gray);
+    font-size: 0.9rem;
+  }
+
+  .investment-line:last-child {
+    border-bottom: none;
+    padding-top: 1.2rem;
+    margin-top: 0.5rem;
+    border-top: 2px solid var(--dark);
+    font-weight: 500;
+  }
+
+  .investment-line .label { color: #3a3a3a; }
+  .investment-line .amount { font-weight: 500; color: var(--dark); }
+
+  /* ── CLIENTS ── */
+  .clients-section { background: var(--white); }
+  .client-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+    align-items: center;
+  }
+  .client-logo {
+    aspect-ratio: 1 / 1;
+    background: var(--light-gray);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .client-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+  .client-logo:hover img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+  }
+  .client-logo .placeholder-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 4px;
+    padding: 2.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    position: relative;
+  }
+  .testimonial-card::before {
+    content: '\201C';
+    font-family: 'Jost', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--light-gray);
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+  }
+  .testimonial-quote {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #3a3a3a;
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  .testimonial-author {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--dark);
+  }
+  .testimonial-role {
+    font-size: 0.78rem;
+    color: var(--warm-gray);
+    margin-top: 0.2rem;
+  }
+
+  /* ── ABOUT / FOOTER ── */
+  .about-section {
+    background: var(--dark);
+    color: var(--white);
+    padding: 5rem 6vw;
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .about-photo {
+    width: 280px;
+    height: 340px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #3a3a3a, #2a2a2a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.2);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    gap: 0.5rem;
+  }
+
+  .about-photo svg {
+    width: 40px; height: 40px;
+    stroke: rgba(255,255,255,0.15);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .about-text .section-label { color: var(--accent); }
+  .about-text .section-title { color: var(--white); }
+  .about-text p { color: rgba(255,255,255,0.65); }
+
+  .about-text a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196,167,108,0.3);
+    transition: border-color 0.3s;
+  }
+
+  .about-text a:hover { border-color: var(--accent); }
+
+  .footer {
+    text-align: center;
+    padding: 2.5rem 6vw;
+    font-size: 0.7rem;
+    color: var(--warm-gray);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── REEL SECTION ── */
+  .reel-section {
+    background: var(--dark);
+    padding: 5rem 6vw;
+  }
+
+  .reel-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .reel-section .section-label { color: var(--accent); }
+  .reel-section .section-title { color: var(--white); margin-bottom: 1rem; }
+  .reel-section p { color: rgba(255,255,255,0.55); }
+
+  /* ── INTERVIEW GRID ── */
+  .interview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin: 2.5rem 0;
+  }
+  .interview-grid .grid-img { overflow: hidden; border-radius: 2px; }
+  .interview-grid .grid-img img { width: 100%; height: auto; display: block; }
+
+  /* ── IMAGE GRID (MASONRY) ── */
+  .image-grid {
+    columns: 4;
+    column-gap: 4px;
+    margin: 2.5rem 0;
+  }
+
+  .image-grid .grid-img {
+    break-inside: avoid;
+    margin-bottom: 4px;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .image-grid .grid-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .treatment-grid { min-width: 0; }
+    .treatment-card { min-width: 280px; max-width: 320px; }
+    .client-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; }
+    .image-grid { columns: 2; }
+    section { padding: 3.5rem 5vw; }
+  }
+
+  /* ── PRINT STYLES ── */
+  @media print {
+    .sticky-nav { display: none; }
+    .btn-download { display: none; }
+    .hero { height: auto; min-height: 400px; page-break-after: always; }
+    section { padding: 2rem 1in; }
+    .media-break { height: 250px; page-break-before: avoid; }
+    .treatment-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .treatment-card { min-width: 100%; }
+    .about-section { background: var(--dark) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .video-container { display: none; }
+    .reel-section { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="hero">
+  <div class="hero-media">
+    <!-- Replace with actual hero image or video -->
+    <img src="images/DJI_0099.jpg" alt="Farm landscape at golden hour">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-label">Production Proposal</div>
+    <h1 class="hero-title">Philo Ridge Farm</h1>
+    <p class="hero-subtitle">A creative treatment for capturing the rhythms, beauty, and mission of a regenerative farm across four seasons.</p>
+    <div class="hero-meta">Prepared by Corey Hendrickson &nbsp;&middot;&nbsp; February 2026</div>
+  </div>
+</header>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="sticky-nav">
+  <a href="#vision">Vision</a>
+  <a href="#treatment">Treatment</a>
+  <a href="#reel">Reel</a>
+  <a href="#photos">Photos</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#deliverables">Deliverables</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#investment">Investment</a>
+  <a href="#about">About</a>
+  <div class="nav-spacer"></div>
+  <button class="btn-download" onclick="window.print()">Save as PDF</button>
+</nav>
+
+<!-- ═══════════ VISION ═══════════ -->
+<section id="vision" style="background: var(--white);">
+  <img src="images/philo_logo.jpg" alt="Philo Ridge Farm logo" style="max-width: 200px; margin-bottom: 1.5rem; display: block; margin-left: auto; margin-right: auto;">
+  <div class="section-label">Creative Vision</div>
+  <h2 class="section-title">Honest Light, Quiet Power</h2>
+  <p class="lead">
+    Philo Ridge Farm is not a place that needs embellishment. The work speaks for itself — hands in the soil, animals moving across open pasture, a kitchen that honors what the land provides. My approach is to let the farm's own rhythms guide the camera, capturing the real texture of each day with patience and care.
+  </p>
+  <p>
+    I work in a documentary-observational style that leans into natural light, long lenses, and unhurried pacing. No heavy color grading or trendy effects — just rich, honest imagery that feels as grounded as the farm itself. The goal is footage that earns trust: when someone watches these films, they should feel like they've been there.
+  </p>
+  <p>
+    Audio matters as much as image. I pay close attention to the environmental soundscape — wind through the pasture, the rhythmic thud of a kitchen knife, quiet conversation between teammates — and weave these into the edit as a way of grounding the viewer in place. Interviews will be conversational and relaxed, drawing out the genuine voices behind the work.
+  </p>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══════════ TREATMENT CARDS ═══════════ -->
+<section id="treatment">
+  <div class="section-label">Creative Treatment</div>
+  <h2 class="section-title">Five Stories, One Farm</h2>
+  <p>Each short film is a window into one facet of Philo Ridge — self-contained but sharing a unified visual language and pace. Here's how I see each one unfolding:</p>
+
+  <div class="treatment-grid">
+
+    <!-- Card 1 -->
+    <div class="treatment-card">
+      <div class="card-img" style="background: none;">
+        <img src="images/_DSC6238.jpg" alt="Market garden" style="width:100%;height:100%;object-fit:cover;object-position:center 75%;">
+      </div>
+      <div class="card-body">
+        <div class="card-number">Film 01</div>
+        <h3>Market Garden</h3>
+        <p>Dawn light on rows of greens. Hands thinning seedlings. Water catching light in the greenhouse. This piece moves at the pace of growing things — slow, deliberate, seasonal. We follow the arc of a single morning's harvest from soil to crate, letting the work tell the story.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="treatment-card">
+      <div class="card-img" style="background: none;">
+        <img src="images/_CHP5298.jpg" alt="Livestock and land stewardship" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;">
+      </div>
+      <div class="card-body">
+        <div class="card-number">Film 02</div>
+        <h3>Livestock &amp; Land Stewardship</h3>
+        <p>Cattle in open pasture. Sheep moving through rotational paddocks. The close, trusting relationship between animals and the people who tend them. Wide aerial shots reveal the scale and intentionality of the land management, while intimate close-ups show the daily care that makes it work.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="treatment-card">
+      <div class="card-img" style="background: none;">
+        <img src="images/_CHP4550.jpg" alt="Food and hospitality" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="card-body">
+        <div class="card-number">Film 03</div>
+        <h3>Food &amp; Hospitality</h3>
+        <p>The kitchen as continuation of the field. Steam rising, knives working through just-picked vegetables, the quiet choreography of a professional kitchen. We trace the thread from harvest to plate and capture the dining experience as it's meant to be felt — warm, unhurried, connected to the land.</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="treatment-card">
+      <div class="card-img" style="background: none;">
+        <img src="images/_DSC0441.jpg" alt="Field research" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="card-body">
+        <div class="card-number">Film 04</div>
+        <h3>Field Research</h3>
+        <p>Hands collecting soil samples. Quiet focus in the field. The intellectual engine behind the farm's regenerative practices. This film positions Philo Ridge as a place where farming and science meet — curious, rigorous, forward-looking. Interviews with researchers anchor the narrative in purpose.</p>
+      </div>
+    </div>
+
+    <!-- Card 5 (full width) -->
+    <div class="treatment-card">
+      <div class="card-img" style="background: none;">
+        <img src="images/ad1.jpg" alt="Classes and events" style="width:100%;height:100%;object-fit:cover;object-position:center 85%;">
+      </div>
+      <div class="card-body">
+        <div class="card-number">Film 05</div>
+        <h3>Classes &amp; Events</h3>
+        <p>The farm as gathering place. Whether it's a workshop on soil health, a farm tour, or a speaker series, this film captures the energy and community that Philo Ridge builds around its mission. Candid moments of learning, laughter, and shared meals tell the story of a farm that's as much about people as it is about land.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ MEDIA BREAK ═══════════ -->
+<div class="media-break">
+  <img src="images/DJI_0291.jpg" alt="Aerial farm landscape" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;">
+</div>
+
+<!-- ═══════════ REEL / SAMPLE WORK ═══════════ -->
+<div class="reel-section" id="reel">
+  <div class="reel-inner">
+    <div class="section-label">Sample Work</div>
+    <h2 class="section-title">The Sugarmaker</h2>
+    <p>A 90 second brand film that reflects desired qualifications of documentary storytelling, high-quality interviews, fieldwork, drone footage and a natural, clean use of available light.</p>
+
+    <div class="video-container">
+      <script src="https://fast.wistia.com/player.js" async></script>
+      <script src="https://fast.wistia.com/embed/u4whqikxpq.js" async type="module"></script>
+      <style>wistia-player[media-id='u4whqikxpq']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/u4whqikxpq/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+      <wistia-player media-id="u4whqikxpq" aspect="1.7777777777777777"></wistia-player>
+    </div>
+
+    <h2 class="section-title" style="margin-top: 2.5rem;">Assorted Frame Grab Samples</h2>
+
+    <div class="interview-grid">
+      <div class="grid-img"><img src="images/a1.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/a2.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/a3.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/CT2.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/CT1.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/CT3.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/Vermont_Housing_Conservation_Board_0007.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/Vermont_Housing_Conservation_Board_0008.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/Vermont_Housing_Conservation_Board_0009.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/Vermont_Housing_Conservation_Board_0010.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/Vermont_Housing_Conservation_Board_0011.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/Vermont_Housing_Conservation_Board_0012.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/at1.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/at3.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/at2.jpg" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/b1.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/b2.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/b3.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/f1.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/f2.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/f3.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/oy1.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/oy2.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/oy3.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/pf1.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/pf2.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/pf3.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/rh1.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/rh2.webp" alt="Interview frame"></div>
+      <div class="grid-img"><img src="images/rh3.webp" alt="Interview frame"></div>
+    </div>
+
+    <div style="background: #767676; margin: 3rem -6vw -5rem; padding: 3rem 6vw 5rem;">
+    <h2 class="section-title" id="photos">Photography Samples</h2>
+
+    <div class="image-grid">
+      <div class="grid-img"><img src="images/farm_0004.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/farm_0001.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/yke1.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSF5775.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC6432.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_O7V9958.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/farm_0137.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC4950.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_O7V9980.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/farm_0138.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/yke2.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_O7V9554.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/Joes_Brook_Farm-8.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC3842.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSF0026.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/20080124_YKE_COW_0010.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/DJI_0417.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/Sunday_Bell_Farm_0040.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/Hillside_Farm_0037.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/yke3.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_CHP4667.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/farm_0350.jpg" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_D5C3850.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC6218.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_O7V9610.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC0037.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/_DSC6155.webp" alt="Farm gallery"></div>
+      <div class="grid-img"><img src="images/Laughing_Child_Farm_03.webp" alt="Farm gallery"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ TESTIMONIALS ═══════════ -->
+<section id="testimonials">
+  <div class="section-label">Testimonials</div>
+  <h2 class="section-title">What Clients Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-quote">Working with Corey Hendrickson Productions was such a phenomenal experience for our team! We sought Corey's expertise on a complex, multi-day documentary project to chronicle the lived experience of working lands entrepreneurs we serve in Vermont. Not only was the video footage and photography visually stunning, but Corey was able to connect with each person filmed, his friendly interview style putting folks at ease and allowing them to open up and share their truth. It's evident how much Corey cares about sharing stories authentically and with respect. We couldn't be happier with the outcome of our video, and feel that we've finally been able to create a piece that captures our why.</p>
+      <div class="testimonial-author">Mariah Noth</div>
+      <div class="testimonial-role">Vermont Housing &amp; Conservation Board</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-quote">I have had the pleasure of working with Corey Hendrickson on an ongoing photography project documenting farmers throughout Vermont across all four seasons for the Intervale Center. Corey coordinates and plans each shoot directly with the farmers, requiring both professional skill and a genuine ability to put people at ease in their own environment. His portraits possess a comfort and personal nature that is rare, drawing out authentic expression from subjects who are not accustomed to being photographed. The galleries he delivers consistently include compelling environmental portraits, honest documentary work, and polished product photography, all with a cohesive vision across every frame. He is exactly the kind of collaborator you can trust to represent your subject with authenticity and care.</p>
+      <div class="testimonial-author">Sara Armstrong Donegan</div>
+      <div class="testimonial-role">Intervale Center</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DELIVERABLES ═══════════ -->
+<section id="deliverables">
+  <div class="section-label">Deliverables</div>
+  <h2 class="section-title">What You'll Receive</h2>
+
+  <table class="deliverables-table">
+    <thead>
+      <tr>
+        <th>Deliverable</th>
+        <th>Format</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Short Promotional Films</td>
+        <td>5 films &middot; 30–90 sec each</td>
+        <td>One per theme: Market Garden, Livestock, Food & Hospitality, Research, Classes & Events. Delivered in 16:9 and 9:16 (vertical) formats.</td>
+      </tr>
+      <tr>
+        <td>Social Media Clips</td>
+        <td>10–20 clips &middot; 5–20 sec each</td>
+        <td>Curated, edited clips optimized for Instagram, TikTok, and web use. A mix of b-roll moments, interview sound bites, and atmospheric footage.</td>
+      </tr>
+      <tr>
+        <td>Interview Footage</td>
+        <td>Full-length + selects</td>
+        <td>Complete interviews with founders and key staff, plus edited selects for onboarding and voiceover use.</td>
+      </tr>
+      <tr>
+        <td>Drone Footage</td>
+        <td>Edited + raw selects</td>
+        <td>Aerial sequences of the farm's 500+ acres, integrated into films and also delivered as standalone clips.</td>
+      </tr>
+      <tr>
+        <td>Organized Raw Footage</td>
+        <td>Full archive</td>
+        <td>All raw footage, organized by location, date, and subject. Delivered via hard drive or cloud transfer.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══════════ TIMELINE ═══════════ -->
+<section id="timeline">
+  <div class="section-label">Timeline</div>
+  <h2 class="section-title">Production Schedule</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-phase">Phase 01</div>
+      <div class="timeline-detail">
+        <h4>Pre-Production</h4>
+        <p>Shot list development, location scouting, scheduling interviews, and aligning on creative direction. 1–2 weeks.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-phase">Phase 02</div>
+      <div class="timeline-detail">
+        <h4>Primary Shoot — Summer 2026</h4>
+        <p>2–4 days on-site filming across all key areas: fields, livestock, kitchen, research sites, and interviews. Timed to maximize golden-hour light and seasonal activity.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-phase">Phase 03</div>
+      <div class="timeline-detail">
+        <h4>Post-Production</h4>
+        <p>Editing, color correction, sound design, and music selection. Two rounds of revisions included. 3–5 weeks after final shoot day.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-phase">Phase 04</div>
+      <div class="timeline-detail">
+        <h4>Delivery</h4>
+        <p>Final films, social clips, raw footage archive, and all deliverables transferred via your preferred method.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-phase">Optional</div>
+      <div class="timeline-detail">
+        <h4>Seasonal Follow-Up Shoots</h4>
+        <p>Fall, winter, and spring sessions to capture the full four-season story. June speaker summit coverage also available. These can be contracted separately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══════════ INVESTMENT ═══════════ -->
+<section id="investment">
+  <div class="section-label">Investment</div>
+  <h2 class="section-title">Project Investment</h2>
+  <p>The following reflects the scope outlined above for the primary summer shoot, including pre-production, filming, and post-production.</p>
+
+  <div class="investment-box">
+    <div class="investment-line">
+      <span class="label">Pre-Production (planning, tech scouting, pre-interviews, shot list creation)</span>
+      <span class="amount">$500/day</span>
+    </div>
+    <div class="investment-line">
+      <span class="label">Production (2–4 shoot days, Sony FX9, Sony FX3, Ronin, Aputure Lighting, Sticks, Grip, Mavic 3 Drone)</span>
+      <span class="amount">$2,500/day</span>
+    </div>
+    <div class="investment-line">
+      <span class="label">Post-Production (editing, color, sound, 2 revision rounds)</span>
+      <span class="amount">$650/day</span>
+    </div>
+    <div class="investment-line">
+      <span class="label">Total Project Investment</span>
+      <span class="amount">$4,300/day</span>
+    </div>
+    <div class="investment-line">
+      <span class="label">4 day shoot at 10% discount</span>
+      <span class="amount">$15,500</span>
+    </div>
+  </div>
+
+  <p style="margin-top: 1.5rem; font-size: 0.82rem; color: var(--warm-gray);">
+    Optional seasonal shoots and the June speaker summit can be quoted separately based on scope and schedule. Travel and accommodation expenses for on-site days, if applicable, are billed at cost.
+  </p>
+</section>
+
+<!-- ═══════════ CLIENTS ═══════════ -->
+<section class="clients-section" id="clients">
+  <div class="section-label">Select Clients</div>
+  <h2 class="section-title">Trusted By</h2>
+  <div class="client-grid">
+    <div class="client-logo"><img src="logos/landolakes.png" alt="Land O'Lakes"></div>
+    <div class="client-logo"><img src="logos/cabot.png" alt="Cabot"></div>
+    <div class="client-logo"><img src="logos/intervalecenter.png" alt="Intervale Center"></div>
+    <div class="client-logo"><img src="logos/GMFTS.jpeg" alt="GMFTS"></div>
+    <div class="client-logo"><img src="logos/VT_Land_Trust.jpeg" alt="Vermont Land Trust"></div>
+    <div class="client-logo"><img src="logos/vermontway.png" alt="Vermont Way"></div>
+    <div class="client-logo"><img src="logos/vhcb.png" alt="VHCB"></div>
+    <div class="client-logo"><img src="logos/vtsoy.jpeg" alt="Vermont Soy"></div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<div class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-photo" style="background: none;">
+      <img src="me-tt.jpg" alt="Corey Hendrickson" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+    </div>
+    <div class="about-text">
+      <div class="section-label">About</div>
+      <h2 class="section-title">Corey Hendrickson</h2>
+      <p>My connection to farm life goes back further than my career does. I spent my earliest years on a farm in New Hampshire, the memories are hazy, but the imprint wasn't. Some experiences shape you quietly, and without fully understanding why, I have always felt most at home in working landscapes, most comfortable up to my knees in muck with animals chewing on my shirt and sniffing my camera gear.</p>
+      <p>This love of working lands fully germinated during my high school summers while picking vegetables at Wilson Farms in Massachusetts, where I learned early what it actually means to do hard work.</p>
+      <p>I went on to study Forestry at the University of Vermont, which led to two seasons in Alaska as a field researcher for the US Forest Service, followed by several more summers fighting wildfire with the USFS Pike Hotshots across the Western United States. Long days in demanding and unpredictable conditions became second nature, and it turned out to be perfect training for the endurance and adaptability that film production requires.</p>
+      <p>Over the past 20 years I have been filming and photographing on farms across the region, developing a visual language for agricultural life that goes beyond the picturesque. I understand how farms actually work, which means I know where to be, when to wait, and when to move.</p>
+      <p>That experience runs alongside my work as a producer, director, and editor for a nationally aired, award-winning PBS series based on New England life, work that taught me how to find and shape a compelling story, manage complex productions, and deliver results that meet the highest broadcast standards. My cinematography has also been used for the PBS series American Masters, HBO and NBC.</p>
+      <p>I also bring extensive experience creating still photography in conjunction with video production, allowing for a cohesive vision across both deliverables. This skillset has been harnessed by national brands, as well as organizations and non-profits throughout Vermont. I have been a contributing photographer to Yankee Magazine for nearly two decades, capturing all facets of life in rural New England from portraits to food to travel stories.</p>
+      <p>For Philo Ridge Farm, I bring all of it: the technical craft, the storytelling instincts, and a genuine feel for the rhythms of farm life that no amount of research can replicate.</p>
+      <p style="margin-top: 1.5rem;">
+        <a href="mailto:studio@coreyhendrickson.com">studio@coreyhendrickson.com</a><br>
+        <a href="https://coreyhendrickson.com" target="_blank">coreyhendrickson.com</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  &copy; 2026 Corey Hendrickson &nbsp;&middot;&nbsp; This proposal is confidential and intended solely for Philo Ridge Farm.
+</footer>
+
+</body>
+</html>
