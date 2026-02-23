@@ -7,11 +7,13 @@ export function SiteHeader() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm">
         <div className="flex items-center justify-between px-6 py-5 md:px-10">
-          <a
-            href="/"
-            className="text-sm font-medium uppercase tracking-widest text-foreground"
-          >
-            Corey Hendrickson Productions
+          <a href="/" className="flex flex-col leading-tight">
+            <span className="text-sm font-medium uppercase tracking-widest text-foreground">
+              Corey Hendrickson Productions
+            </span>
+            <span className="font-slab text-xs font-semibold italic tracking-wider text-muted-foreground">
+              Focused on your why, not just the what.
+            </span>
           </a>
 
           <div className="flex items-center gap-5">
