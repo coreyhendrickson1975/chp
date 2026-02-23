@@ -327,8 +327,7 @@ export const projects: Project[] = [
     slug: "vermont-housing-and-conservation-board",
     image: "/images/vhcb/Vermont_Housing_Conservation_Board_0012.jpg",
     description: [
-      "The people VHCB serves didn't choose this lifestyle because it looked good on Instagram. They chose it because it meant something.",
-      "Farmers, foresters, stewards of land that has been in families for generations. People who could have done something else and didn't. That kind of commitment always has a story behind it, and usually a deeply personal one.",
+      "The people VHCB serves didn't choose this lifestyle because it looked good on Instagram. They chose it because it meant something. Farmers, foresters, stewards of land that has been in families for generations. People who could have done something else and didn't. That kind of commitment always has a story behind it, and usually a deeply personal one.",
       "Our job was to create the conditions where those stories could surface. Not to produce testimonials, but to capture the lived experience of people doing some of the most essential work in Vermont who rarely get the chance to explain why they do it.",
       "<em>\"Working with Corey Hendrickson Productions was such a phenomenal experience for our team! We sought Corey's expertise on a complex, multi-day documentary project to chronicle the lived experience of working lands entrepreneurs we serve in Vermont. Not only was the video footage and photography visually stunning, but Corey was able to connect with each person filmed, his friendly interview style putting folks at ease and allowing them to open up and share their truth. It's evident how much Corey cares about sharing stories authentically and with respect. We couldn't be happier with the outcome of our video, and feel that we've finally been able to create a piece that captures our why.\" — Mariah Noth, VHCB</em>",
     ],
