@@ -257,11 +257,9 @@ export const projects: Project[] = [
     subtitle: "The Vermont Everyone Eats Story",
     image: "/images/ramen-day/Ramen_Day_111.webp",
     description: [
-      "When SEVCA commissioned us to make Ramen Day, they weren't asking for a fundraising video. They were asking us to document something genuinely new: a statewide effort that reimagined how communities address hunger, not as a charity problem, but as a community one.",
-      "We made a film about it because we believed the story deserved to travel further than Vermont. Not as a fundraising tool or an awareness campaign, but as a template for how to apply this novel approach of combatting food insecurity.",
+      "When SEVCA commissioned us to make Ramen Day, they weren't asking for a fundraising video. They were asking us to document something genuinely new: a statewide effort that reimagined how communities address hunger, not as a charity problem, but as a community one. We made a film about it because we believed the story deserved to travel further than Vermont. Not as a fundraising tool or an awareness campaign, but as a template for how to apply this novel approach of combatting food insecurity.",
       "It did travel. The film screened across Vermont, then crossed borders, earning selections at festivals in Sweden, the UK, Chicago, and Detroit, and taking home awards including Silver at the Telly Awards and recognition at the Luleå International Film Festival and the Better Cities Film Festival.",
-      "Awards matter less to us than the conversation the film started. But the fact that a story about a small statewide initiative in Vermont resonated in Detroit and Stockholm says something about how universal the why behind Ramen Day really is.",
-      "Unfortunately, food insecurity didn't end when the program's federal funding did. Ramen Day is still being screened in Vermont.",
+      "Awards matter less to us than the conversation the film started. But the fact that a story about a small statewide initiative in Vermont resonated in Detroit and Stockholm says something about how universal the why behind Ramen Day really is. Unfortunately, food insecurity didn't end when the program's federal funding did. Ramen Day is still being screened in Vermont.",
     ],
     keywords: "food insecurity, social justice, hunger, food justice, documentary film, nutrition, Vermont, community action, film festival, Telly Awards",
     gallery: ramenDayGallery,
