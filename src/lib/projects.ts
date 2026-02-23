@@ -247,7 +247,7 @@ export const projects: Project[] = [
     subtitle: "Weekends With Yankee",
     image: "/images/pbs/Weekends_With_Yankee_0031.jpg",
     description: [
-      "New England has more corners than most people realize. Over ten seasons of Weekends With Yankee, I've been lucky enough to find a lot of them.",
+      "New England doesn't give itself up easily. Ten seasons of Weekends With Yankee taught me how to look.",
       "Weekends With Yankee is a national PBS program that reaches 95% of the PBS marketplace, bringing New England stories to millions of viewers across the country. Over a decade my role evolved from cinematographer to director of photography, producer, and editor. On any given production day I'm directing on-camera talent, tracking dialogue, cataloging b-roll, managing crew, operating a camera, and shaping the visual narrative in real time. At the end of the day, ten hours of footage becomes a stringout, becomes a paper cut, becomes ten minutes of television.",
       "But what I didn't expect was what the show would teach me.",
       "Every episode was a deep dive into a corner of New England I might not have otherwise explored: craft traditions, culinary innovations, hidden landscapes, and the people who steward them. The show didn't just document these places. It gave me a relationship with them. I've returned to many of them with my family, seeing them through new eyes, sharing what I learned behind the camera.",
