@@ -14,7 +14,7 @@ interface Props {
 const { title, description, image, type = 'website', keywords } = Astro.props;
 
 const siteName = 'Corey Hendrickson Productions';
-const siteUrl = 'https://coreyhendrickson.com';
+const siteUrl = 'https://www.coreyhendrickson.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const siteKeywords = "Vermont Video Production, Vermont Film Crew, Vermont Filmmaker, Vermont DP, documentary film production, documentary, interview, new england film production, new england film director, non-fiction cinematographer, cinematographer, vermont storytelling, vermont brand films, new england, vermont, middlebury, corey hendrickson, doc film, film director, commercial video production, brand films, corporate video, nonprofit video production, television production, PBS, NBC, educational video, hospitality video, travel video, Vermont cinematographer, New England cinematographer, vermont non-fiction cinematographer, vermont director, Vermont Businesses for Social Responsibility, VBSR, Addison County Chamber of Commerce, Middlebury Vermont business, Vermont sustainable business, vermont video production, vermont production company";
 const metaKeywords = keywords ? `${keywords}, ${siteKeywords}` : siteKeywords;
