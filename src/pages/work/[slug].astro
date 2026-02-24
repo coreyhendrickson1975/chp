@@ -19,7 +19,7 @@ if (!project) {
 }
 
 const nextProject = getNextProject(slug);
-const title = `${project.title} — Corey Hendrickson Productions`;
+const title = project.pageTitle || `${project.title} — Corey Hendrickson Productions`;
 const description = project.metaDescription || project.description[0]?.slice(0, 160) || '';
 ---
 

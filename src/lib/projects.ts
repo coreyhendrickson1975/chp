@@ -10,6 +10,7 @@ export interface Project {
   subtitle?: string;
   keywords?: string;
   metaDescription?: string;
+  pageTitle?: string;
   hidden?: boolean;
 }
 
@@ -213,6 +214,7 @@ export const projects: Project[] = [
     ],
     keywords: "educational filmmaker, university video, vermont college films, education, vermont film production, middlebury, university of vermont, dartmouth, video production for academia, university media, college media",
     metaDescription: "Brand film production for Bread Loaf Writers' Conference — capturing the invisible moments that make the world's most celebrated writing program special.",
+    pageTitle: "Bread Loaf Writers' Conference Films | Corey Hendrickson Productions",
     gallery: middleburyGallery,
     galleryAspectRatio: "16/9",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -228,6 +230,7 @@ export const projects: Project[] = [
     ],
     keywords: "Travel, Tourism, Travel films, Tourism film production, Maine, Vermont, New Hampshire, Massachussetts, Explore, Travel DP, Tourism cinematographer, Yankee Publishing",
     metaDescription: "Documentary-style travel films for the Maine Office of Tourism — rooted portraits of real people and places across New England.",
+    pageTitle: "Maine Tourism Documentary Films | Yankee Publishing x Corey Hendrickson",
     gallery: yankeeGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -241,6 +244,7 @@ export const projects: Project[] = [
     ],
     keywords: "luxury resort video production, hotel marketing video, resort brand film, hospitality filmmaker, luxury hotel content, resort photography, ski resort video, spa video production, fine dining film, Woodstock Inn, Vermont luxury resort, hospitality marketing, resort cinematographer, hotel brand content, luxury travel video",
     metaDescription: "Brand film and photography for the Woodstock Inn & Resort — showing not what Vermont luxury looks like, but why people fall in love with it.",
+    pageTitle: "Brand Film & Photography | Woodstock Inn & Resort",
     gallery: woodstockInnGallery,
     galleryAspectRatio: "2.35/1",
     wistiaId: ["8rmon31dsv", "6lodr6l7om"],
@@ -258,6 +262,7 @@ export const projects: Project[] = [
       "Ten seasons in, that's the part I value most. Not the credits, not the reach. The education. And the friendships that came with it.",
     ],
     keywords: "Yankee Magazine, New England, PBS, Weekends With Yankee, Insider's Guide, Travel, Tourism, Adventure, Documentary New England, DP, Director, Explore, Taste, Culinary, Amy Traverso, Richard Wiese",
+    pageTitle: "Weekends With Yankee | 10 Seasons on PBS | Corey Hendrickson Productions",
     gallery: pbsGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -271,6 +276,7 @@ export const projects: Project[] = [
       "Drawing those stories out is what we do. We have the kind of conversations that feel less like interviews and more like old friends catching up, and that's exactly where the heart of the story lives. Guests who watch these films don't just see the art around them differently. They feel connected to the people who made it, to the Vermont that exists beyond the lobby. That's the difference between Hotel Vermont and a corporate chain: one sells you a room. The other makes you feel like you belong somewhere.",
     ],
     keywords: "Hotel Vermont, Burlington Vermont, Vermont hotel, Vermont travel, Vermont tourism, travel film, tourism video production, hotel film, hospitality video production, Vermont hospitality, boutique hotel Vermont, Vermont artists, Vermont makers, Vermont craftspeople, artist documentary, maker film, Vermont art, in-room video, hotel content, travel content production, Vermont destination, Burlington hotel, Vermont filmmaker, travel brand film",
+    pageTitle: "Artist Story Films | Hotel Vermont x Corey Hendrickson Productions",
     gallery: [
       "/images/hotel-vermont/Hotel_Vermont-1.jpg",
       "/images/hotel-vermont/Hotel_Vermont-2.jpg",
@@ -315,6 +321,7 @@ export const projects: Project[] = [
     ],
     keywords: "behind the scenes film production, BTS production, Miracle on Ice, Run Back the Miracle, Al Michaels, Peacock, NBC, Olympics, hockey, Lake Placid film production, Herb Brooks arena, 1980 Olympics, sports documentary, behind the scenes cinematography, Frequency Pictures",
     metaDescription: "Documentary crew work on Run Back the Miracle, a Peacock special revisiting the 1980 Miracle on Ice at the original Herb Brooks Arena in Lake Placid.",
+    pageTitle: "Run Back the Miracle | NBC Peacock Special | Corey Hendrickson Productions",
     gallery: nbcGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -330,6 +337,7 @@ export const projects: Project[] = [
     ],
     keywords: "Camphill movement, special needs filmmaking, autism, filmmaker for sensitive subjects, brand films, fundraising filmmaker, waldorf video production, nonprofit documentary, gala film, anniversary film, archival documentary, disability community, intentional community, nonprofit video production",
     metaDescription: "Anniversary gala film for the Camphill Foundation — honoring 60 years of the Camphill movement while making the case for the work still ahead.",
+    pageTitle: "60th Anniversary Gala Film | Camphill Foundation",
     gallery: camphillGallery,
     galleryAspectRatio: "1.33/1",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -346,6 +354,7 @@ export const projects: Project[] = [
     ],
     keywords: "Kikkan Randall, Ted King, American Birkebeiner, Brand Film, Untapped, Branded Documentary, Athletes film, Sports filmmaker, Maple, Fischer Skis, Birkie, Vermont, Nordic",
     metaDescription: "Brand film following Olympic legend Kikkan Randall coaching cyclist Ted King through the American Birkebeiner — a story that got better when plans fell apart.",
+    pageTitle: "Kikkan Randall & Ted King at the Birkebeiner | Untapped Brand Film",
     gallery: untappedGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -360,6 +369,7 @@ export const projects: Project[] = [
     ],
     keywords: "non-profit filmmaker, conservation video production, farmer films, agricultural film production, new england farm films, vermont farm filmmaker, governmental film production, working lands documentary, Vermont conservation, housing documentary, nonprofit storytelling, rural Vermont filmmaker",
     metaDescription: "Documentary film for VHCB — capturing the stories of Vermont farmers, foresters, and land stewards who rarely get the chance to explain why they do it.",
+    pageTitle: "Working Lands Documentary | Vermont Housing & Conservation Board",
     gallery: vhcbGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -374,6 +384,7 @@ export const projects: Project[] = [
       "Awards matter less to us than the conversation the film started. But the fact that a story about a statewide initiative in Vermont resonated in Detroit and Stockholm says something about how universal the why behind Ramen Day really is. Unfortunately, food insecurity didn't end when the program's federal funding did. Ramen Day is still being screened in Vermont.",
     ],
     keywords: "food insecurity, social justice, hunger, food justice, documentary film, nutrition, Vermont, community action, film festival, Telly Awards",
+    pageTitle: "Ramen Day | Award-Winning Documentary Film | Corey Hendrickson Productions",
     gallery: ramenDayGallery,
     galleryAspectRatio: "2.35/1",
   },
