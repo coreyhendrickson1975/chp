@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://coreyhendrickson.com',
+  site: 'https://www.coreyhendrickson.com',
   integrations: [react(), tailwind(), sitemap()],
   output: 'static',
 });
