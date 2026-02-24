@@ -20,7 +20,7 @@ if (!project) {
 
 const nextProject = getNextProject(slug);
 const title = `${project.title} — Corey Hendrickson Productions`;
-const description = project.description[0]?.slice(0, 160) || '';
+const description = project.metaDescription || project.description[0]?.slice(0, 160) || '';
 ---
 
 <BaseLayout title={title} description={description} image={project.image} type="article" keywords={project.keywords}>

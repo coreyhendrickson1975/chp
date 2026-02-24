@@ -9,6 +9,7 @@ export interface Project {
   wistiaId?: string | string[];
   subtitle?: string;
   keywords?: string;
+  metaDescription?: string;
   hidden?: boolean;
 }
 
@@ -211,6 +212,7 @@ export const projects: Project[] = [
       "<em>\"Working with Corey Hendrickson Productions to document the Bread Loaf Writers' Conferences has been an outstanding experience. Despite the intensive schedule of both programs, Corey had a remarkable ability to make our participants feel comfortable on camera, drawing out authentic, personal reflections from people of all different backgrounds. The collaborative editing process was equally impressive—Corey worked closely with all of us on staff to ensure each final piece captured the unique essence and spirit of the conferences. These films genuinely represent what makes Bread Loaf special and we are proud to feature them on our website and promotional materials.\" - Jennifer Grotz, Director of the Bread Loaf Writers' Conferences</em>",
     ],
     keywords: "educational filmmaker, university video, vermont college films, education, vermont film production, middlebury, university of vermont, dartmouth, video production for academia, university media, college media",
+    metaDescription: "Brand film production for Bread Loaf Writers' Conference — capturing the invisible moments that make the world's most celebrated writing program special.",
     gallery: middleburyGallery,
     galleryAspectRatio: "16/9",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -225,6 +227,7 @@ export const projects: Project[] = [
       "The locations themselves often became central to the narrative. A windswept lighthouse in Maine wasn't just a backdrop; it shaped the keeper's daily rhythm and worldview. A hillside blueberry farm didn't just look beautiful; it explained why someone would choose this particular hard work in this particular soil. We used strong b-roll to build depth in the story world: close-ups of weathered tools, wide shots that established geography and community, moments of process that revealed dedication. The result was content that felt true to Maine: unpretentious, rooted, and real.",
     ],
     keywords: "Travel, Tourism, Travel films, Tourism film production, Maine, Vermont, New Hampshire, Massachussetts, Explore, Travel DP, Tourism cinematographer, Yankee Publishing",
+    metaDescription: "Documentary-style travel films for the Maine Office of Tourism — rooted portraits of real people and places across New England.",
     gallery: yankeeGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -237,6 +240,7 @@ export const projects: Project[] = [
       "We worked with professional models and local talent alike, and in both cases the approach was the same: slow down, create an atmosphere where people stop performing and start being. Authenticity at this level isn't accidental. It's earned on set, one moment at a time. The result isn't a content library that shows what the Woodstock Inn offers. It's one that shows why people fall in love with it.",
     ],
     keywords: "luxury resort video production, hotel marketing video, resort brand film, hospitality filmmaker, luxury hotel content, resort photography, ski resort video, spa video production, fine dining film, Woodstock Inn, Vermont luxury resort, hospitality marketing, resort cinematographer, hotel brand content, luxury travel video",
+    metaDescription: "Brand film and photography for the Woodstock Inn & Resort — showing not what Vermont luxury looks like, but why people fall in love with it.",
     gallery: woodstockInnGallery,
     galleryAspectRatio: "2.35/1",
     wistiaId: ["8rmon31dsv", "6lodr6l7om"],
@@ -310,6 +314,7 @@ export const projects: Project[] = [
       "Frequency Pictures brought us in to help document it. We assembled a nimble three-camera crew, captured the installation as it came to life, and spent time in a town where the Olympics are less a memory than a landscape. As a two-time host city, Lake Placid carries that legacy in its storefronts, its faces, and the quiet everyday texture of a place that has always known it was part of something bigger. When a story is this familiar, the challenge isn't telling it. It's finding the angle that makes it land like new. That's exactly what this project was built around, and exactly the kind of work we are drawn to.",
     ],
     keywords: "behind the scenes film production, BTS production, Miracle on Ice, Run Back the Miracle, Al Michaels, Peacock, NBC, Olympics, hockey, Lake Placid film production, Herb Brooks arena, 1980 Olympics, sports documentary, behind the scenes cinematography, Frequency Pictures",
+    metaDescription: "Documentary crew work on Run Back the Miracle, a Peacock special revisiting the 1980 Miracle on Ice at the original Herb Brooks Arena in Lake Placid.",
     gallery: nbcGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -324,6 +329,7 @@ export const projects: Project[] = [
       "Presented live at the gala, the film was designed to do two things at once: celebrate what was built and remind everyone in the room that the work isn't finished.",
     ],
     keywords: "Camphill movement, special needs filmmaking, autism, filmmaker for sensitive subjects, brand films, fundraising filmmaker, waldorf video production, nonprofit documentary, gala film, anniversary film, archival documentary, disability community, intentional community, nonprofit video production",
+    metaDescription: "Anniversary gala film for the Camphill Foundation — honoring 60 years of the Camphill movement while making the case for the work still ahead.",
     gallery: camphillGallery,
     galleryAspectRatio: "1.33/1",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -339,6 +345,7 @@ export const projects: Project[] = [
       "The result was authentic, unpredictable, and exactly what great branded content should be.",
     ],
     keywords: "Kikkan Randall, Ted King, American Birkebeiner, Brand Film, Untapped, Branded Documentary, Athletes film, Sports filmmaker, Maple, Fischer Skis, Birkie, Vermont, Nordic",
+    metaDescription: "Brand film following Olympic legend Kikkan Randall coaching cyclist Ted King through the American Birkebeiner — a story that got better when plans fell apart.",
     gallery: untappedGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -352,6 +359,7 @@ export const projects: Project[] = [
       "<em>\"Working with Corey Hendrickson Productions was such a phenomenal experience for our team! We sought Corey's expertise on a complex, multi-day documentary project to chronicle the lived experience of working lands entrepreneurs we serve in Vermont. Not only was the video footage and photography visually stunning, but Corey was able to connect with each person filmed, his friendly interview style putting folks at ease and allowing them to open up and share their truth. It's evident how much Corey cares about sharing stories authentically and with respect. We couldn't be happier with the outcome of our video, and feel that we've finally been able to create a piece that captures our why.\" — Mariah Noth, VHCB</em>",
     ],
     keywords: "non-profit filmmaker, conservation video production, farmer films, agricultural film production, new england farm films, vermont farm filmmaker, governmental film production, working lands documentary, Vermont conservation, housing documentary, nonprofit storytelling, rural Vermont filmmaker",
+    metaDescription: "Documentary film for VHCB — capturing the stories of Vermont farmers, foresters, and land stewards who rarely get the chance to explain why they do it.",
     gallery: vhcbGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
