@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.coreyhendrickson.com',
+  trailingSlash: 'always',
   integrations: [react(), tailwind(), sitemap()],
   output: 'static',
 });
