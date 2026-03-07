@@ -25,11 +25,26 @@ const ogImage = image
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': ['LocalBusiness', 'ProfessionalService'],
   name: siteName,
   url: siteUrl,
-  description: 'Vermont-based film and video production company specializing in documentary, brand films, television, and commercial video. Serving New England and beyond.',
+  email: 'studio@coreyhendrickson.com',
+  description: 'Vermont video production company specializing in brand films, documentary, television, and commercial video. Based in Middlebury, VT — serving New England and beyond.',
   logo: `${siteUrl}/favicon.png`,
+  image: `${siteUrl}/images/yankee/Yankee_Travel_Tourism0032.jpg`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Middlebury',
+    addressRegion: 'VT',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 44.0153,
+    longitude: -73.1673,
+  },
+  areaServed: ['Vermont', 'New Hampshire', 'Maine', 'Massachusetts', 'Connecticut', 'Rhode Island', 'New England'],
+  serviceType: 'Video Production',
   memberOf: [
     {
       '@type': 'Organization',
