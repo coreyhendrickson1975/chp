@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://coreyhendrickson.com/sitemap-index.xml
+Sitemap: https://www.coreyhendrickson.com/sitemap-index.xml

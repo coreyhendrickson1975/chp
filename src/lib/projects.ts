@@ -262,6 +262,7 @@ export const projects: Project[] = [
       "Ten seasons in, that's the part I value most. Not the credits, not the reach. The education. And the friendships that came with it.",
     ],
     keywords: "Yankee Magazine, New England, PBS, Weekends With Yankee, Insider's Guide, Travel, Tourism, Adventure, Documentary New England, DP, Director, Explore, Taste, Culinary, Amy Traverso, Richard Wiese",
+    metaDescription: "Ten seasons as DP, producer, and editor on Weekends With Yankee — a national PBS series bringing New England stories to millions of viewers.",
     pageTitle: "PBS — Weekends With Yankee, New England | Corey Hendrickson",
     gallery: pbsGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -277,6 +278,7 @@ export const projects: Project[] = [
       "<em>\"Corey has been part of the Hotel Vermont story for a long time–long enough to understand that we are more than just a place for travelers to stop for the night, but a space for connection, with deep roots in our Vermont community. Our 'Friends of Hotel Vermont' series exemplifies just that. Welcoming guests on each in-room television as they arrive, this collection of films shines light on the craft behind what they see within our walls. Corey blended simple, aesthetic beauty and storytelling to create a series that has added depth and meaning to every Hotel Vermont experience.\" — Maddy Moore, Marketing Manager, Hotel Vermont</em>",
     ],
     keywords: "Hotel Vermont, Burlington Vermont, Vermont hotel, Vermont travel, Vermont tourism, travel film, tourism video production, hotel film, hospitality video production, Vermont hospitality, boutique hotel Vermont, Vermont artists, Vermont makers, Vermont craftspeople, artist documentary, maker film, Vermont art, in-room video, hotel content, travel content production, Vermont destination, Burlington hotel, Vermont filmmaker, travel brand film",
+    metaDescription: "Artist story films for Hotel Vermont in Burlington, VT — connecting guests to the Vermont makers behind the art on their walls.",
     pageTitle: "Hotel Vermont — Brand Film, Burlington VT | Corey Hendrickson",
     gallery: [
       "/images/hotel-vermont/Hotel_Vermont-1.jpg",
@@ -385,6 +387,7 @@ export const projects: Project[] = [
       "Awards matter less to us than the conversation the film started. But the fact that a story about a statewide initiative in Vermont resonated in Detroit and Stockholm says something about how universal the why behind Ramen Day really is. Unfortunately, food insecurity didn't end when the program's federal funding did. Ramen Day is still being screened in Vermont.",
     ],
     keywords: "food insecurity, social justice, hunger, food justice, documentary film, nutrition, Vermont, community action, film festival, Telly Awards",
+    metaDescription: "Ramen Day — a Vermont documentary about community and hunger that won a Telly Award and screened at festivals in Sweden, the UK, Chicago, and Detroit.",
     pageTitle: "Ramen Day — Award-Winning Documentary Film, Vermont | Corey Hendrickson",
     gallery: ramenDayGallery,
     galleryAspectRatio: "2.35/1",
