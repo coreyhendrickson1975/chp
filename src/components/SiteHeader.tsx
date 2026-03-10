@@ -12,7 +12,7 @@ export function SiteHeader() {
               Corey Hendrickson Productions
             </span>
             <span className="font-slab text-xs font-semibold italic tracking-wider text-muted-foreground">
-              Focused on your why, not just the what.
+              Focused on the why.
             </span>
           </a>
 
