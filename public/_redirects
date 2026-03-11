@@ -1,0 +1,6 @@
+# 301 Redirects for old URLs that are generating 404s
+# Old portfolio pages from previous site version
+
+/american-postcards /work/ 301
+/americanmasters /work/pbs/ 301
+/blackandwhite /work/ 301
