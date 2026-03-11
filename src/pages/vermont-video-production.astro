@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SiteHeader } from '../components/SiteHeader';
+---
+
+<BaseLayout
+title="Vermont Video Production Company | Corey Hendrickson Productions"
+  description="Vermont video production based in Middlebury, VT. Brand films, documentary, corporate video, and television — serving New England and beyond."
+>
+  <SiteHeader client:load />
+  <main class="pt-24 pb-20">
+
+        <!-- Hero -->
+        <div class="mx-auto max-w-4xl px-6 md:px-10">
+                <h1 class="mb-6 text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
+                          Vermont Video Production
+                        </h1>
+                        <p class="mb-16 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                          Corey Hendrickson Productions is a Vermont video production company based in Middlebury, VT. We make story-driven films for brands, nonprofits, and broadcasters — work built around authentic moments, careful craft, and a genuine point of view. Whether you're a Vermont organization looking to connect with a local audience or a national brand that wants the texture of the real New England, we know how to find the story and put it on screen.
+                                  </p>
+
+                                  <!-- What We Make -->
+                                  <div class="mb-16">
+                                            <h2 class="mb-4 text-xs font-medium uppercase tracking-widest text-foreground">
+                                                        What We Make
+                                                      </h2>
+                                                      <p class="mb-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                                                                  We specialize in brand films, documentary content, corporate video, and television production. Every project starts with the same question: why does this story matter? From there we build — through discovery, pre-production, and shoot days that stay flexible enough to capture what you can't plan for.
+                                                                            </p>
+                                                                            <p class="max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                                                                                        Our work has aired on PBS, NBC, and HBO. We've made films for Middlebury College, Hotel Vermont, the Vermont Housing &amp; Conservation Board, Yankee Publishing, and dozens of other Vermont organizations and national brands.
+                                                                                      </p>
+                                                                                    </div>
+
+                                                                                    <!-- Based in Vermont -->
+                                                                                    <div class="mb-16">
+                                                                                              <h2 class="mb-4 text-xs font-medium uppercase tracking-widest text-foreground">
+                                                                                                          Based in Vermont. Built for New England.
+                                                                                                                    </h2>
+                                                                                                                    <p class="max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                                                                                                                                We're rooted in Middlebury, VT, and we work regularly across Vermont — Burlington, Stowe, Woodstock, Brattleboro, the Northeast Kingdom — as well as throughout New Hampshire, Maine, Massachusetts, and beyond. Being based in Vermont isn't just a location detail. It shapes how we work: unhurried, intentional, and attuned to the kind of quiet authenticity that makes New England stories worth watching.
+                                                                                                                              </p>
+                                                                                                                            </div>
+                                                                                                                      
+                                                                                                                            <!-- Services -->
+                                                                                                                            <div class="mb-16">
+                                                                                                                                      <h2 class="mb-6 text-xs font-medium uppercase tracking-widest text-foreground">
+                                                                                                                                                  Services
+                                                                                                                                                </h2>
+                                                                                                                                                <div class="grid gap-3 sm:grid-cols-2 max-w-2xl">
+                                                                                                                                                  {[
+                                                                                                                                                                "Brand films and commercial video",
+                                                                                                                                                                "Documentary production",
+                                                                                                                                                                "Corporate and nonprofit video",
+                                                                                                                                                                "Television production and crew",
+                                                                                                                                                                "Interview and b-roll production",
+                                                                                                                                                                "Event and editorial video",
+                                                                                                                                                  ].map((service) => (
+                                                                                                                                                                <div class="flex items-start gap-3">
+                                                                                                                                                                                <span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground"></span>
+                                                                                                                                                                                                <p class="text-sm text-muted-foreground">{service}</p>
+                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                            ))}
+                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                      <!-- CTA -->
+                                                                                                                                                                                                      <div class="border-t border-border mt-8 py-16 text-center">
+                                                                                                                                                                                                              <h2 class="mb-4 text-xs font-medium uppercase tracking-widest text-foreground">
+                                                                                                                                                                                                                        Start a Project
+                                                                                                                                                                                                                      </h2>
+                                                                                                                                                                                                                      <p class="mb-6 text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
+                                                                                                                                                                                                                                If you're looking for a Vermont video production company that leads with story and delivers with craft, let's talk.
+                                                                                                                                                                                                                                        </p>
+                                                                                                                                                                                                                                        <a
+                                                                                                                                                                                                                                          href="/contact"
+                                                                                                                                                                                                                                          class="text-sm text-foreground underline underline-offset-4 transition-opacity hover:opacity-60"
+                                                                                                                                                                                                                                                  >
+                                                                                                                                                                                                                                                    Get in touch &rarr;
+                                                                                                                                                                                                                                                  </a>
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                              </main>
+                                                                                                                                                                                                                                              <SiteFooter />
+                                                                                                                                                                                                                                            </BaseLayout>
