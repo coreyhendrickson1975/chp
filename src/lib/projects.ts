@@ -7,7 +7,7 @@ export interface Project {
   galleryAspectRatio?: string;
   videoUrl?: string;
   wistiaId?: string | string[];
-  subtitle?: string;
+  subtitle?: string
   keywords?: string;
   metaDescription?: string;
   pageTitle?: string;
@@ -250,7 +250,7 @@ export const projects: Project[] = [
     wistiaId: ["8rmon31dsv", "6lodr6l7om"],
   },
   {
-    title: "PBS",
+    title: "Weekends with Yankee | PBS",
     slug: "pbs",
     subtitle: "Weekends With Yankee",
     image: "/images/pbs/Weekends_With_Yankee_0031.jpg",
