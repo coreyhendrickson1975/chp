@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SiteHeader } from '../components/SiteHeader';
+---
+
+<BaseLayout
+  title="Corey Hendrickson Productions"
+  description="Vermont video production company making brand films focused on why."
+>
+  <SiteHeader client:load />
+
+  <main class="flex min-h-screen flex-col items-center justify-center px-6 py-24 md:px-10">
+    <div class="mx-auto w-full max-w-md text-center">
+
+      <p class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-6">
+        Corey Hendrickson Productions
+      </p>
+
+      <h1 class="text-3xl font-medium tracking-tight text-foreground md:text-4xl text-balance mb-4">
+        Brand films focused on why.
+      </h1>
+
+      <p class="text-sm leading-relaxed text-muted-foreground mb-12">
+        Vermont-based. Story-driven. PBS · HBO · NBC.
+      </p>
+
+      <div class="flex flex-col gap-4">
+        <a href="/work" class="block w-full rounded-none border border-foreground bg-foreground px-6 py-4 text-sm font-medium tracking-wide text-background transition-opacity hover:opacity-70">
+          See the Work
+        </a>
+        <a href="/process" class="block w-full rounded-none border border-foreground px-6 py-4 text-sm font-medium tracking-wide text-foreground transition-opacity hover:opacity-70">
+          How It Works
+        </a>
+        <a href="/contact" class="block w-full rounded-none border border-foreground px-6 py-4 text-sm font-medium tracking-wide text-foreground transition-opacity hover:opacity-70">
+          Work With Me
+        </a>
+        <a href="https://www.instagram.com/vermontcorey" target="_blank" rel="noopener" class="block w-full rounded-none border border-border px-6 py-4 text-sm font-medium tracking-wide text-muted-foreground transition-opacity hover:opacity-70">
+          Follow on Instagram
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
