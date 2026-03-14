@@ -9,19 +9,18 @@ interface Props {
   image?: string;
   type?: string;
   keywords?: string;
+  noindex?: boolean;
 }
 
-const { title, description, image, type = 'website', keywords } = Astro.props;
+const { title, description, image, type = 'website', keywords, noindex } = Astro.props;
 
 const siteName = 'Corey Hendrickson Productions';
 const siteUrl = 'https://www.coreyhendrickson.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+
 const siteKeywords = "Vermont Video Production, Vermont Film Crew, Vermont Filmmaker, Vermont DP, documentary film production, documentary, interview, new england film production, new england film director, non-fiction cinematographer, cinematographer, vermont storytelling, vermont brand films, new england, vermont, middlebury, corey hendrickson, doc film, film director, commercial video production, brand films, corporate video, nonprofit video production, television production, PBS, NBC, educational video, hospitality video, travel video, Vermont cinematographer, New England cinematographer, vermont non-fiction cinematographer, vermont director, Vermont Businesses for Social Responsibility, VBSR, Addison County Chamber of Commerce, Middlebury Vermont business, Vermont sustainable business, vermont video production, vermont production company";
 const metaKeywords = keywords ? `${keywords}, ${siteKeywords}` : siteKeywords;
-
-const ogImage = image
-  ? new URL(image, siteUrl).href
-  : `${siteUrl}/images/yankee/Yankee_Travel_Tourism0032.jpg`;
+const ogImage = image ? new URL(image, siteUrl).href : `${siteUrl}/images/yankee/Yankee_Travel_Tourism0032.jpg`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -59,6 +58,7 @@ const jsonLd = {
   ],
 };
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,9 +71,8 @@ const jsonLd = {
 
     <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
-
     <meta name="author" content="Corey Hendrickson" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
