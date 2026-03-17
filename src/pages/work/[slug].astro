@@ -21,9 +21,34 @@ if (!project) {
 const nextProject = getNextProject(slug);
 const title = project.pageTitle || `${project.title} — Corey Hendrickson Productions`;
 const description = project.metaDescription || project.description[0]?.slice(0, 160) || '';
----
+const siteUrl = 'https://www.coreyhendrickson.com';
 
-<BaseLayout title={title} description={description} image={project.image} type="article" keywords={project.keywords}>
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: title,
+  description: description,
+  thumbnailUrl: project.image ? new URL(project.image, siteUrl).href : undefined,
+  producer: {
+    '@type': 'Person',
+    name: 'Corey Hendrickson',
+    url: siteUrl,
+  },
+  productionCompany: {
+    '@type': 'Organization',
+    name: 'Corey Hendrickson Productions',
+    url: siteUrl,
+  },
+};
+---
+<BaseLayout
+  title={title}
+  description={description}
+  image={project.image}
+  type="article"
+  keywords={project.keywords}
+  videoSchema={videoSchema}
+>
   <SiteHeader client:load />
   <main>
     <ProjectDetail project={project} nextProject={nextProject} client:load />
