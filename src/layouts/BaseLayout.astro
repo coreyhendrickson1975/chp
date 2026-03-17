@@ -10,9 +10,10 @@ interface Props {
   type?: string;
   keywords?: string;
   noindex?: boolean;
+  videoSchema?: object;
 }
 
-const { title, description, image, type = 'website', keywords, noindex } = Astro.props;
+const { title, description, image, type = 'website', keywords, noindex, videoSchema } = Astro.props;
 
 const siteName = 'Corey Hendrickson Productions';
 const siteUrl = 'https://www.coreyhendrickson.com';
@@ -22,7 +23,7 @@ const siteKeywords = "Vermont Video Production, Vermont Film Crew, Vermont Filmm
 const metaKeywords = keywords ? `${keywords}, ${siteKeywords}` : siteKeywords;
 const ogImage = image ? new URL(image, siteUrl).href : `${siteUrl}/images/yankee/Yankee_Travel_Tourism0032.jpg`;
 
-const jsonLd = {
+const businessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'ProfessionalService'],
   name: siteName,
@@ -44,6 +45,20 @@ const jsonLd = {
   },
   areaServed: ['Vermont', 'New Hampshire', 'Maine', 'Massachusetts', 'Connecticut', 'Rhode Island', 'New England'],
   serviceType: 'Video Production',
+  sameAs: [
+    'https://www.instagram.com/vermontcorey/',
+    'https://www.linkedin.com/in/coreyhendrickson/',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Video Production Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Film Production' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Documentary Production' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Video Production' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Television Production' } },
+    ],
+  },
   memberOf: [
     {
       '@type': 'Organization',
@@ -56,9 +71,35 @@ const jsonLd = {
       url: 'https://www.addisoncounty.com',
     },
   ],
+  founder: { '@type': 'Person', '@id': `${siteUrl}/#corey` },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${siteUrl}/#corey`,
+  name: 'Corey Hendrickson',
+  url: siteUrl,
+  jobTitle: 'Producer / Director / Editor',
+  description: 'Vermont-based filmmaker and producer with two decades of experience in story-driven video production, brand films, and documentary.',
+  worksFor: {
+    '@type': 'Organization',
+    name: siteName,
+    url: siteUrl,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Middlebury',
+    addressRegion: 'VT',
+    addressCountry: 'US',
+  },
+  sameAs: [
+    'https://www.instagram.com/vermontcorey/',
+    'https://www.linkedin.com/in/coreyhendrickson/',
+    'https://vermontcorey.photo/',
+  ],
 };
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -94,8 +135,14 @@ const jsonLd = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <!-- Structured Data: Business -->
+    <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+    <!-- Structured Data: Video (page-specific, optional) -->
+    {videoSchema && <script type="application/ld+json" set:html={JSON.stringify(videoSchema)} />}
 
     <!-- Google Analytics -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4LPRX8NML3"></script>
