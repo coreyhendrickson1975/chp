@@ -4,64 +4,73 @@ import SiteFooter from '../components/SiteFooter.astro';
 import { SiteHeader } from '../components/SiteHeader';
 ---
 
-
 <BaseLayout title="About — Vermont Video Production | Corey Hendrickson" description="Two decades of story-driven Vermont video production based in Middlebury. Meet the team behind Corey Hendrickson Productions.">
   <SiteHeader client:load />
   <main class="pt-24">
 
     <!-- Corey Featured Section -->
-    <div class="px-6 md:px-10 mb-20 clearfix">
-      <div class="float-left mr-16 mb-6 w-64 md:w-72 flex-shrink-0">
-        <div class="relative aspect-[3/4] w-full overflow-hidden bg-muted">
-          <img
-            src="/images/corey-hendrickson-portrait.jpg"
-            alt="Corey Hendrickson"
-            class="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-          />
-        </div>
-      </div>
-      <h1 class="mb-1 text-2xl font-medium tracking-tight text-foreground md:text-3xl">
-        Corey Hendrickson
-      </h1>
-      <p class="text-xs text-muted-foreground mb-6 uppercase tracking-widest">Producer / Director / Editor</p>
+    <div class="px-6 md:px-10 mb-20">
 
-      <!-- Photo Carousel -->
-      <div class="mb-8 max-w-lg" id="bio-carousel">
-        <div class="relative overflow-hidden bg-muted" style="aspect-ratio: 4/3;">
-          <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out h-full">
-            <div class="min-w-full h-full flex-shrink-0">
-              <img src="/images/about/about-kid.jpg" alt="Young Corey Hendrickson, Vermont" class="w-full h-full object-cover" loading="lazy" />
+      <!-- Top: Portrait + Carousel side by side -->
+      <div class="flex flex-col md:flex-row gap-8 mb-8">
+
+        <!-- Portrait -->
+        <div class="flex-shrink-0 w-56 md:w-64">
+          <div class="relative aspect-[3/4] w-full overflow-hidden bg-muted">
+            <img
+              src="/images/corey-hendrickson-portrait.jpg"
+              alt="Corey Hendrickson"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <h1 class="mt-3 mb-0.5 text-2xl font-medium tracking-tight text-foreground md:text-3xl">
+            Corey Hendrickson
+          </h1>
+          <p class="text-xs text-muted-foreground uppercase tracking-widest">Producer / Director / Editor</p>
+        </div>
+
+        <!-- Photo Carousel -->
+        <div class="flex-1 min-w-0" id="bio-carousel">
+          <div class="relative overflow-hidden bg-muted w-full" style="aspect-ratio: 4/3;">
+            <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out h-full">
+              <div class="min-w-full h-full flex-shrink-0">
+                <img src="/images/about/about-kid.jpg" alt="Young Corey Hendrickson, Vermont" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="min-w-full h-full flex-shrink-0">
+                <img src="/images/about/about-alaska.jpg" alt="Alaska field season, US Forest Service" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="min-w-full h-full flex-shrink-0">
+                <img src="/images/about/about-fire.jpg" alt="Pike Hotshot Crew, wildland firefighting" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="min-w-full h-full flex-shrink-0">
+                <img src="/images/about/about-chamonix.jpg" alt="Ski mountaineering in Chamonix, France" class="w-full h-full object-cover" loading="lazy" />
+              </div>
             </div>
-            <div class="min-w-full h-full flex-shrink-0">
-              <img src="/images/about/about-alaska.jpg" alt="Alaska field season, US Forest Service" class="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div class="min-w-full h-full flex-shrink-0">
-              <img src="/images/about/about-fire.jpg" alt="Pike Hotshot Crew, wildland firefighting" class="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div class="min-w-full h-full flex-shrink-0">
-              <img src="/images/about/about-chamonix.jpg" alt="Ski mountaineering in Chamonix, France" class="w-full h-full object-cover" loading="lazy" />
+
+            <!-- Prev / Next buttons -->
+            <button id="carousel-prev" aria-label="Previous photo" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button id="carousel-next" aria-label="Next photo" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+
+            <!-- Dot indicators -->
+            <div id="carousel-dots" class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-100 transition-opacity" data-index="0" aria-label="Photo 1"></button>
+              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="1" aria-label="Photo 2"></button>
+              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="2" aria-label="Photo 3"></button>
+              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="3" aria-label="Photo 4"></button>
             </div>
           </div>
-          <!-- Prev / Next buttons -->
-          <button id="carousel-prev" aria-label="Previous photo" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <button id="carousel-next" aria-label="Next photo" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-          <!-- Dot indicators -->
-          <div id="carousel-dots" class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-100 transition-opacity" data-index="0" aria-label="Photo 1"></button>
-            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="1" aria-label="Photo 2"></button>
-            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="2" aria-label="Photo 3"></button>
-            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="3" aria-label="Photo 4"></button>
-          </div>
+          <!-- Caption -->
+          <p id="carousel-caption" class="text-xs text-muted-foreground mt-2 italic">Vermont, early days. The curiosity started here.</p>
         </div>
-        <!-- Caption -->
-        <p id="carousel-caption" class="text-xs text-muted-foreground mt-2 italic">Vermont, early days. The curiosity started here.</p>
+
       </div>
 
+      <!-- Bio text full width below -->
       <div class="space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base">
         <p>My first memory connected to photography is standing in our kitchen as a kid, watching my mom's slides come to life on a light table. The little 35mm transparencies glowing there, the faint smell of developer on the film. Putting my eye to the loupe, the kitchen faded away and I was mesmerized by a whole new world. Something clicked.</p>
         <p>I was lucky enough to have an amazing photography and film program in high school, with enthusiastic, inspired teachers. I loved making photographs with friends and printing them in the darkroom. It felt like magic. And I can still hear the hum and rattle of the projector in film history class the first time Rosemary's Baby terrified me and On the Waterfront stopped me cold. I was completely hooked on the idea that images, arranged in a certain way, could make you feel something true.</p>
@@ -73,6 +82,7 @@ import { SiteHeader } from '../components/SiteHeader';
         <p>That same curiosity about people and place is at the heart of everything I make. The best brands aren't just well-presented. They have a point of view, a reason for being. My job is to find that story and tell it honestly, in a way that feels true to the place and the people behind it.</p>
         <p>If you've found your way to this page, you probably believe your story is worth telling well. So do I. I'd love to hear what you're working on.</p>
       </div>
+
     </div>
 
     <!-- Team Bridge -->
@@ -162,13 +172,23 @@ import { SiteHeader } from '../components/SiteHeader';
     startAuto();
   }
 
-  document.getElementById('carousel-prev')?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-  document.getElementById('carousel-next')?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => { goTo(Number((dot as HTMLElement).dataset.index)); resetAuto(); });
+  document.getElementById('carousel-prev')?.addEventListener('click', () => {
+    goTo(current - 1);
+    resetAuto();
   });
 
-  // Pause on hover
+  document.getElementById('carousel-next')?.addEventListener('click', () => {
+    goTo(current + 1);
+    resetAuto();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(Number((dot as HTMLElement).dataset.index));
+      resetAuto();
+    });
+  });
+
   const carousel = document.getElementById('bio-carousel');
   carousel?.addEventListener('mouseenter', () => clearInterval(timer));
   carousel?.addEventListener('mouseleave', () => startAuto());
