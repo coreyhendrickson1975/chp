@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { SiteHeader } from '../components/SiteHeader';
 ---
-
 <BaseLayout title="About — Vermont Video Production | Corey Hendrickson" description="Two decades of story-driven Vermont video production based in Middlebury. Meet the team behind Corey Hendrickson Productions.">
   <SiteHeader client:load />
   <main class="pt-24">
@@ -11,63 +10,46 @@ import { SiteHeader } from '../components/SiteHeader';
     <!-- Corey Featured Section -->
     <div class="px-6 md:px-10 mb-20">
 
-      <!-- Top: Portrait + Carousel side by side -->
-      <div class="flex flex-col md:flex-row gap-8 mb-8">
-
-        <!-- Portrait -->
-        <div class="flex-shrink-0 w-56 md:w-64">
-          <div class="relative aspect-[3/4] w-full overflow-hidden bg-muted">
-            <img
-              src="/images/corey-hendrickson-portrait.jpg"
-              alt="Corey Hendrickson"
-              class="absolute inset-0 h-full w-full object-cover"
-              loading="eager"
-            />
-          </div>
-          <h1 class="mt-3 mb-0.5 text-2xl font-medium tracking-tight text-foreground md:text-3xl">
-            Corey Hendrickson
-          </h1>
-          <p class="text-xs text-muted-foreground uppercase tracking-widest">Producer / Director / Editor</p>
-        </div>
-
-        <!-- Photo Carousel -->
-        <div class="w-1/4 flex-shrink-0" id="bio-carousel">
-          <div class="relative overflow-hidden bg-muted w-full" style="aspect-ratio: 4/3;">
-            <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out h-full">
-              <div class="min-w-full h-full flex-shrink-0">
-                <img src="/images/about/about-kid.jpg" alt="Young Corey Hendrickson, Vermont" class="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div class="min-w-full h-full flex-shrink-0">
-                <img src="/images/about/about-alaska.jpg" alt="Alaska field season, US Forest Service" class="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div class="min-w-full h-full flex-shrink-0">
-                <img src="/images/about/about-fire.jpg" alt="Pike Hotshot Crew, wildland firefighting" class="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div class="min-w-full h-full flex-shrink-0">
-                <img src="/images/about/about-chamonix.jpg" alt="Ski mountaineering in Chamonix, France" class="w-full h-full object-cover" loading="lazy" />
-              </div>
+      <!-- Carousel (portrait is slide 1) -->
+      <div class="w-full md:w-1/3 mb-6" id="bio-carousel">
+        <div class="relative overflow-hidden bg-muted w-full" style="aspect-ratio: 3/4;">
+          <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out h-full">
+            <div class="min-w-full h-full flex-shrink-0">
+              <img src="/images/corey-hendrickson-portrait.jpg" alt="Corey Hendrickson" class="w-full h-full object-cover" loading="eager" />
             </div>
-
-            <!-- Prev / Next buttons -->
-            <button id="carousel-prev" aria-label="Previous photo" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <button id="carousel-next" aria-label="Next photo" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-
-            <!-- Dot indicators -->
-            <div id="carousel-dots" class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-100 transition-opacity" data-index="0" aria-label="Photo 1"></button>
-              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="1" aria-label="Photo 2"></button>
-              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="2" aria-label="Photo 3"></button>
-              <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="3" aria-label="Photo 4"></button>
+            <div class="min-w-full h-full flex-shrink-0">
+              <img src="/images/about/about-kid.jpg" alt="Young Corey Hendrickson, Vermont" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="min-w-full h-full flex-shrink-0">
+              <img src="/images/about/about-alaska.jpg" alt="Alaska field season, US Forest Service" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="min-w-full h-full flex-shrink-0">
+              <img src="/images/about/about-fire.jpg" alt="Pike Hotshot Crew, wildland firefighting" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="min-w-full h-full flex-shrink-0">
+              <img src="/images/about/about-chamonix.jpg" alt="Ski mountaineering in Chamonix, France" class="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
-          <!-- Caption -->
-          <p id="carousel-caption" class="text-xs text-muted-foreground mt-2 italic">Vermont, early days. The curiosity started here.</p>
+          <!-- Prev / Next buttons -->
+          <button id="carousel-prev" aria-label="Previous photo" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button id="carousel-next" aria-label="Next photo" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <!-- Dot indicators -->
+          <div id="carousel-dots" class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-100 transition-opacity" data-index="0" aria-label="Photo 1"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="1" aria-label="Photo 2"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="2" aria-label="Photo 3"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="3" aria-label="Photo 4"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="4" aria-label="Photo 5"></button>
+          </div>
         </div>
-
+        <!-- Caption + Name/Title below carousel -->
+        <p id="carousel-caption" class="text-xs text-muted-foreground mt-2 italic"></p>
+        <h1 class="mt-3 mb-0.5 text-2xl font-medium tracking-tight text-foreground md:text-3xl">Corey Hendrickson</h1>
+        <p class="text-xs text-muted-foreground uppercase tracking-widest">Producer / Director / Editor</p>
       </div>
 
       <!-- Bio text full width below -->
@@ -82,7 +64,6 @@ import { SiteHeader } from '../components/SiteHeader';
         <p>That same curiosity about people and place is at the heart of everything I make. The best brands aren't just well-presented. They have a point of view, a reason for being. My job is to find that story and tell it honestly, in a way that feels true to the place and the people behind it.</p>
         <p>If you've found your way to this page, you probably believe your story is worth telling well. So do I. I'd love to hear what you're working on.</p>
       </div>
-
     </div>
 
     <!-- Team Bridge -->
@@ -134,13 +115,13 @@ import { SiteHeader } from '../components/SiteHeader';
       <img src="/images/logos/ACC.png" alt="ACC" class="h-16 w-auto object-contain opacity-70" />
       <img src="/images/logos/VBSR.png" alt="Vermont Businesses for Social Responsibility" class="h-16 w-auto object-contain opacity-70" />
     </div>
-
   </main>
   <SiteFooter />
 </BaseLayout>
 
 <script>
   const captions = [
+    "",
     "Vermont, early days. The curiosity started here.",
     "Tongass National Forest, Alaska. Summer field seasons with the US Forest Service.",
     "Pike Hotshot Crew. The fire line had a way of focusing the mind.",
@@ -172,15 +153,8 @@ import { SiteHeader } from '../components/SiteHeader';
     startAuto();
   }
 
-  document.getElementById('carousel-prev')?.addEventListener('click', () => {
-    goTo(current - 1);
-    resetAuto();
-  });
-
-  document.getElementById('carousel-next')?.addEventListener('click', () => {
-    goTo(current + 1);
-    resetAuto();
-  });
+  document.getElementById('carousel-prev')?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+  document.getElementById('carousel-next')?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
 
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
