@@ -214,5 +214,6 @@ import { SiteHeader } from '../components/SiteHeader';
   carousel?.addEventListener('mouseenter', () => clearInterval(timer));
   carousel?.addEventListener('mouseleave', () => startAuto());
 
+  (captionEl as HTMLElement).textContent = captions[0];
   startAuto();
 </script>
