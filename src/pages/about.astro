@@ -192,21 +192,17 @@ import { SiteHeader } from '../components/SiteHeader';
   }
 
   function startAuto() {
+    clearInterval(timer);
     timer = setInterval(() => goTo(current + 1), 4000);
   }
 
-  function resetAuto() {
-    clearInterval(timer);
-    startAuto();
-  }
-
-  document.getElementById('carousel-prev')?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-  document.getElementById('carousel-next')?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+  document.getElementById('carousel-prev')?.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+  document.getElementById('carousel-next')?.addEventListener('click', () => { goTo(current + 1); startAuto(); });
 
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
       goTo(Number((dot as HTMLElement).dataset.index));
-      resetAuto();
+      startAuto();
     });
   });
 
