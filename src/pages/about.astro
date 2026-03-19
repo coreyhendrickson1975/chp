@@ -11,24 +11,43 @@ import { SiteHeader } from '../components/SiteHeader';
     <div class="px-6 md:px-10 mb-20">
 
       <!-- Carousel: centered, 1/2 width, square canvas, contain (no crop) -->
-      <div class="mx-auto w-full md:w-1/2 mb-6" id="bio-carousel">
+      <div class="mx-auto w-full max-w-xs mb-6" id="bio-carousel">
         <div class="relative w-full bg-muted overflow-hidden" style="aspect-ratio: 1/1;">
-          <div id="carousel-track" class="flex h-full transition-transform duration-500 ease-in-out">
-            <div class="min-w-full h-full flex-shrink-0 flex items-center justify-center">
-              <img src="/images/corey-hendrickson-portrait.jpg" alt="Corey Hendrickson" class="max-w-full max-h-full object-contain" loading="eager" />
-            </div>
-            <div class="min-w-full h-full flex-shrink-0 flex items-center justify-center">
-              <img src="/images/about/about-kid.jpg" alt="Young Corey Hendrickson, Vermont" class="max-w-full max-h-full object-contain" loading="lazy" />
-            </div>
-            <div class="min-w-full h-full flex-shrink-0 flex items-center justify-center">
-              <img src="/images/about/about-alaska.jpg" alt="Alaska field season, US Forest Service" class="max-w-full max-h-full object-contain" loading="lazy" />
-            </div>
-            <div class="min-w-full h-full flex-shrink-0 flex items-center justify-center">
-              <img src="/images/about/about-fire.jpg" alt="Pike Hotshot Crew, wildland firefighting" class="max-w-full max-h-full object-contain" loading="lazy" />
-            </div>
-            <div class="min-w-full h-full flex-shrink-0 flex items-center justify-center">
-              <img src="/images/about/about-chamonix.jpg" alt="Ski mountaineering in Chamonix, France" class="max-w-full max-h-full object-contain" loading="lazy" />
-            </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500">
+            <img src="/images/corey-hendrickson-portrait.jpg" alt="Corey Hendrickson" class="max-w-full max-h-full object-contain" loading="eager" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/about-kid.jpg" alt="Young Corey Hendrickson, Vermont" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/about-alaska.jpg" alt="Alaska field season, US Forest Service" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/about-fire.jpg" alt="Pike Hotshot Crew, wildland firefighting" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/about-chamonix.jpg" alt="Ski mountaineering in Chamonix, France" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/me-nantucket.jpeg" alt="Filming on the beach in Nantucket, MA" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/me-s6.jpg" alt="Working off of skis at S6 in Vermont" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/me-julia.jpg" alt="Filming in Middlebury for PBS American Masters" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/bolivia.jpg" alt="Feeding birds in Bolivia" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/maine.jpg" alt="Forestry work in North Maine Woods" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/_DSF6309.jpg" alt="Filming for Weekends in Maine" class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+          <div class="carousel-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
+            <img src="/images/about/NH.jpg" alt="Mt. Monadnock with amazing crew" class="max-w-full max-h-full object-contain" loading="lazy" />
           </div>
           <button id="carousel-prev" aria-label="Previous photo" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="15 18 9 12 15 6"/></svg>
@@ -42,6 +61,13 @@ import { SiteHeader } from '../components/SiteHeader';
             <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="2" aria-label="Photo 3"></button>
             <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="3" aria-label="Photo 4"></button>
             <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="4" aria-label="Photo 5"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="5" aria-label="Photo 6"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="6" aria-label="Photo 7"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="7" aria-label="Photo 8"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="8" aria-label="Photo 9"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="9" aria-label="Photo 10"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="10" aria-label="Photo 11"></button>
+            <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-white opacity-40 transition-opacity" data-index="11" aria-label="Photo 12"></button>
           </div>
         </div>
         <p id="carousel-caption" class="text-xs text-muted-foreground mt-2 italic text-center"></p>
@@ -114,14 +140,21 @@ import { SiteHeader } from '../components/SiteHeader';
 
 <script>
   const captions = [
-    "",
-    "Vermont, early days. The curiosity started here.",
-    "Tongass National Forest, Alaska. Summer field seasons with the US Forest Service.",
-    "Pike Hotshot Crew. The fire line had a way of focusing the mind.",
-    "Chamonix, France. Skiing as a way of seeing the world differently."
+    "Photo by my son.",
+    "Early days, fashion highwater mark.",
+    "Field research on the Tongass NF, SE Alaska.",
+    "On a fire in Wyoming with the Pike Hotshots.",
+    "Making questionable choices in Chamonix.",
+    "Filming on the beach in Nantucket, MA.",
+    "Working off of skis at S6 in Vermont.",
+    "Filming in Middlebury for PBS American Masters.",
+    "Feeding birds in Bolivia.",
+    "Forestry work in North Maine Woods.",
+    "Filming for Weekends in Maine.",
+    "Mt. Monadnock with amazing crew."
   ];
 
-  const track = document.getElementById('carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
   const captionEl = document.getElementById('carousel-caption');
   const dots = document.querySelectorAll('.carousel-dot');
   const total = captions.length;
@@ -129,8 +162,9 @@ import { SiteHeader } from '../components/SiteHeader';
   let timer: ReturnType<typeof setInterval>;
 
   function goTo(index: number) {
+    (slides[current] as HTMLElement).classList.add('opacity-0');
     current = (index + total) % total;
-    (track as HTMLElement).style.transform = `translateX(-${current * 100}%)`;
+    (slides[current] as HTMLElement).classList.remove('opacity-0');
     (captionEl as HTMLElement).textContent = captions[current];
     dots.forEach((dot, i) => {
       (dot as HTMLElement).style.opacity = i === current ? '1' : '0.4';
