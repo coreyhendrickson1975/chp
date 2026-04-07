@@ -32,24 +32,44 @@ export function ProjectDetail({
         </div>
       </section>
 
-      {/* Gallery Grid — 3 columns */}
+      {/* Gallery */}
       <section className="px-4 pb-16 md:px-8 md:pb-24 lg:px-12">
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
-          {project.gallery.map((src, index) => (
-            <div
-              key={index}
-              className={`group relative overflow-hidden bg-muted ${project.galleryAspectRatio ? "" : "aspect-video"}`}
-              style={project.galleryAspectRatio ? { aspectRatio: project.galleryAspectRatio } : undefined}
-            >
-              <img
-                src={src || "/placeholder.svg"}
-                alt={`${project.title} — image ${index + 1}`}
-                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${project.slug === "camphill-foundation" ? "scale-105 group-hover:scale-110" : project.slug === "ramen-day" ? "scale-110 group-hover:scale-[1.15]" : "group-hover:scale-105"} ${index === 11 && project.slug === "woodstock-inn-and-resort" ? "object-bottom" : ""}`}
-                loading={index < 3 ? "eager" : "lazy"}
-              />
-            </div>
-          ))}
-        </div>
+        {project.masonry ? (
+          <div className="flex gap-2 md:gap-3">
+            {[0, 1, 2].map((col) => (
+              <div key={col} className="flex flex-1 flex-col gap-2 md:gap-3">
+                {project.gallery
+                  .filter((_, i) => i % 3 === col)
+                  .map((src, idx) => (
+                    <img
+                      key={idx}
+                      src={src || "/placeholder.svg"}
+                      alt={`${project.title} — image ${idx + 1}`}
+                      className="w-full"
+                      loading={col * 3 + idx < 6 ? "eager" : "lazy"}
+                    />
+                  ))}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
+            {project.gallery.map((src, index) => (
+              <div
+                key={index}
+                className={`group relative overflow-hidden bg-muted ${project.galleryAspectRatio ? "" : "aspect-video"}`}
+                style={project.galleryAspectRatio ? { aspectRatio: project.galleryAspectRatio } : undefined}
+              >
+                <img
+                  src={src || "/placeholder.svg"}
+                  alt={`${project.title} — image ${index + 1}`}
+                  className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${project.slug === "camphill-foundation" ? "scale-105 group-hover:scale-110" : project.slug === "ramen-day" ? "scale-110 group-hover:scale-[1.15]" : "group-hover:scale-105"} ${index === 11 && project.slug === "woodstock-inn-and-resort" ? "object-bottom" : ""}`}
+                  loading={index < 3 ? "eager" : "lazy"}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Wistia Videos */}

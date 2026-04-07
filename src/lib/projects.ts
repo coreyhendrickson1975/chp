@@ -5,6 +5,7 @@ export interface Project {
   description: string[];
   gallery: string[];
   galleryAspectRatio?: string;
+  masonry?: boolean;
   videoUrl?: string;
   wistiaId?: string | string[];
   subtitle?: string
@@ -375,6 +376,56 @@ export const projects: Project[] = [
     pageTitle: "Vermont Conservation Documentary — Housing & Conservation Board | Corey Hendrickson",
     gallery: vhcbGallery,
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
+  {
+    title: "Portraits",
+    slug: "portraits",
+    image: "/people/images/Anais_Mitchell_Portrait.webp",
+    description: [
+      "Twenty years of environmental portraiture has taught me that the best portraits aren't taken, they're earned. Careful attention to light, whether available or created, does the work quietly. It shapes the frame without announcing itself and gives people the room to stop performing and simply be. The result is an image that looks less like a photograph and more like a moment shared between friends. Available for individual and editorial portraits, as well as company-wide portable studio headshots. Inquire for rates and availability.",
+    ],
+    gallery: [
+      "/people/images/Anais_Mitchell_Portrait.webp",
+      "/people/images/CLAUDINE_PEPIN_0021.webp",
+      "/people/images/BILL_MCKIBBEN.webp",
+      "/people/images/Luis_Guzman.webp",
+      "/people/images/Portraits_0001.webp",
+      "/people/images/Portraits_0002.webp",
+      "/people/images/Portraits_0005.webp",
+      "/people/images/Portraits_0006_(1).webp",
+      "/people/images/Portraits_0007.webp",
+      "/people/images/Portraits_0009.webp",
+      "/people/images/Portraits_0010.webp",
+      "/people/images/Portraits_0014.webp",
+      "/people/images/Portraits_0017.webp",
+      "/people/images/Portraits_0018.webp",
+      "/people/images/Portraits_0022.webp",
+      "/people/images/COREY_HENDRICKSON_LIFESTYLE_0002.webp",
+      "/people/images/Corey_Hendrickson_Book_0011.webp",
+      "/people/images/Corey_Hendrickson_Book_0031.webp",
+      "/people/images/Julia_Alvarez_BTS_31.webp",
+      "/people/images/LUKEP_0044.webp",
+      "/people/images/Porter_Day_15294.webp",
+      "/people/images/BERND3.webp",
+      "/people/images/_DSF0893.webp",
+      "/people/images/_DSF4105.webp",
+      "/people/images/_DSF6943.webp",
+      "/people/images/_CHP0343.webp",
+      "/people/images/_CHP4550.webp",
+      "/people/images/_CHP5380.webp",
+      "/people/images/_D1C9574.webp",
+      "/people/images/_D5C4316.webp",
+      "/people/images/_D5C4556-Edit.webp",
+      "/people/images/_DSC3683.webp",
+      "/people/images/_DSC8752.webp",
+      "/people/images/_MG_5028.webp",
+      "/people/images/_MG_6928.webp",
+      "/people/images/_O7V2021.webp",
+    ],
+    masonry: true,
+    keywords: "Vermont portrait photographer, environmental portrait photography, Vermont headshots, corporate headshots Vermont, portable studio headshots, Vermont editorial photographer, Burlington Vermont photographer, Vermont business portraits, executive portraits Vermont, Vermont lifestyle photographer, environmental portraiture, available light portraits, natural light photographer Vermont, Vermont creative photographer, company headshots Vermont, professional headshots Vermont, on-location headshots, Vermont documentary photographer",
+    metaDescription: "Vermont environmental portrait photographer with 20 years of experience. Natural and created light, editorial and corporate headshots, portable studio available statewide.",
+    pageTitle: "Vermont Portrait Photographer — Environmental Portraits & Headshots | Corey Hendrickson",
   },
   {
     title: "Ramen Day",
